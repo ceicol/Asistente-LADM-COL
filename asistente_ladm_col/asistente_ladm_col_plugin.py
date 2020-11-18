@@ -48,7 +48,6 @@ from asistente_ladm_col.lib.ladm_col_models import (LADMColModelRegistry,
                                                     LADMColModel)
 from asistente_ladm_col.lib.dependency.plugin_dependency import PluginDependency
 from asistente_ladm_col.config.enums import (EnumDbActionType,
-                                             EnumWizardType,
                                              EnumLogHandler,
                                              EnumUserLevel)
 from asistente_ladm_col.config.general_config import (ANNEX_17_REPORT,
@@ -60,7 +59,6 @@ from asistente_ladm_col.config.general_config import (ANNEX_17_REPORT,
                                                       COLLECTED_DB_SOURCE,
                                                       WIZARD_CLASS,
                                                       WIZARD_TOOL_NAME,
-                                                      WIZARD_TYPE,
                                                       WIZARD_LAYERS,
                                                       WIZARD_CREATE_COL_PARTY_CADASTRAL,
                                                       WIZARD_CREATE_ADMINISTRATIVE_SOURCE_SURVEY,
@@ -129,6 +127,7 @@ from asistente_ladm_col.gui.reports.reports import ReportGenerator
 from asistente_ladm_col.gui.right_of_way import RightOfWay
 from asistente_ladm_col.gui.toolbar import ToolBar
 from asistente_ladm_col.gui.transitional_system.dlg_upload_file import STUploadFileDialog
+from asistente_ladm_col.gui.wizards.spatial_wizard_factory import SpatialWizardFactory
 from asistente_ladm_col.gui.wizards.survey.dlg_create_group_party_survey import CreateGroupPartySurvey
 from asistente_ladm_col.gui.wizards.survey.wiz_create_points_survey import CreatePointsSurveyWizard
 from asistente_ladm_col.lib.db.db_connection_manager import ConnectionManager
@@ -1447,7 +1446,7 @@ class AsistenteLADMCOLPlugin(QObject):
                                                          wiz_settings[WIZARD_LAYERS],
                                                          wiz_settings[WIZARD_TOOL_NAME]):
             self.wiz = wiz_settings[WIZARD_CLASS](self.iface, self.get_db_connection(), wiz_settings)
-            if wiz_settings[WIZARD_TYPE] & EnumWizardType.SPATIAL_WIZARD:
+            if isinstance(self.wiz, SpatialWizardFactory):
                 # Required signal for wizard geometry creating
                 self.wiz.set_finalize_geometry_creation_enabled_emitted.connect(self.set_enable_finalize_geometry_creation_action)
                 self.wiz_geometry_creation_finished.connect(self.wiz.save_created_geometry)
