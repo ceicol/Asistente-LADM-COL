@@ -119,10 +119,12 @@ class ToolBar(QObject):
 
                 # topology tables are recalculated with the new boundaries
                 if topology_affected_features[db.names.POINT_BFS_T]:
-                    self.fill_topology_table_pointbfs(db, use_selection)
+                    # it is not possible to use the features selected by the user because they have been removed
+                    self.fill_topology_table_pointbfs(db, False)
 
                 if topology_affected_features[db.names.MORE_BFS_T] + topology_affected_features[db.names.LESS_BFS_T] > 0:
-                    self.fill_topology_tables_morebfs_less(db, use_selection)
+                    # it is not possible to use the features selected by the user because they have been removed
+                    self.fill_topology_tables_morebfs_less(db, False)
 
             else:
                 self.logger.info_msg(__name__, QCoreApplication.translate("ToolBar", "There are no boundaries to build."))
