@@ -22,7 +22,6 @@ from qgis.PyQt.QtCore import (QCoreApplication,
 from qgis.PyQt.QtWidgets import QMessageBox
 from qgis.core import (Qgis,
                        QgsProject,
-                       QgsProcessingFeatureSourceDefinition,
                        QgsExpression,
                        edit,
                        QgsVectorLayerUtils)
@@ -47,28 +46,7 @@ class ToolBar(QObject):
 
     def build_boundary(self, db):
         QgsProject.instance().setAutoTransaction(False)
-        layer = self.app.core.get_ladm_layer_from_qgis(db, db.names.LC_BOUNDARY_T, EnumLayerRegistryType.IN_LAYER_TREE)
         use_selection = True
-
-        if layer is None:
-            self.logger.message_with_button_load_layer_emitted.emit(
-                QCoreApplication.translate("ToolBar", "First load the boundary layer into QGIS!"),
-                QCoreApplication.translate("ToolBar", "Load boundary layer now"), db.names.LC_BOUNDARY_T, Qgis.Warning)
-            return
-        else:
-            if layer.selectedFeatureCount() == 0:
-
-                reply = QMessageBox.question(None,
-                                             QCoreApplication.translate("ToolBar", "Continue?"),
-                                             QCoreApplication.translate("ToolBar",
-                                                                        "There are no selected boundaries. Do you want to use all the {} boundaries in the database?").format(
-                                                 layer.featureCount()),
-                                             QMessageBox.Yes | QMessageBox.Cancel, QMessageBox.Cancel)
-                if reply == QMessageBox.Yes:
-                    use_selection = False
-                elif reply == QMessageBox.Cancel:
-                    self.logger.warning_msg(__name__, QCoreApplication.translate("ToolBar", "First select at least one boundary!"))
-                    return
 
         with OverrideCursor(Qt.WaitCursor):
             layers = {
@@ -79,21 +57,28 @@ class ToolBar(QObject):
             }
             self.app.core.get_layers(db, layers, load=True)
 
+            if layers[db.names.LC_BOUNDARY_T].selectedFeatureCount() == 0:
+
+                reply = QMessageBox.question(None,
+                                             QCoreApplication.translate("ToolBar", "Continue?"),
+                                             QCoreApplication.translate("ToolBar",
+                                                                        "There are no selected boundaries. Do you want to use all the {} boundaries in the database?").format(
+                                                 layers[db.names.LC_BOUNDARY_T].featureCount()),
+                                             QMessageBox.Yes | QMessageBox.Cancel, QMessageBox.Cancel)
+                if reply == QMessageBox.Yes:
+                    use_selection = False
+                elif reply == QMessageBox.Cancel:
+                    self.logger.warning_msg(__name__, QCoreApplication.translate("ToolBar", "First select at least one boundary!"))
+                    return
+
             boundary_t_ids = list()
             if use_selection:
-                # Intersect boundaries are selected in order to build
-                # the boundaries correctly and avoid undesired results
-                processing.run("native:selectbylocation", {
-                    'INPUT': layers[db.names.LC_BOUNDARY_T],
-                    'PREDICATE': [0,4,5],  # Intersect, Touch, Overlap
-                    'INTERSECT': QgsProcessingFeatureSourceDefinition(layers[db.names.LC_BOUNDARY_T].id(), True),
-                    'METHOD': 0})
                 boundary_t_ids = [f[db.names.T_ID_F] for f in layers[db.names.LC_BOUNDARY_T].selectedFeatures()]
-                num_boundaries = layer.selectedFeatureCount()
+                num_boundaries = layers[db.names.LC_BOUNDARY_T].selectedFeatureCount()
             else:
                 boundary_t_ids = [f[db.names.T_ID_F] for f in layers[db.names.LC_BOUNDARY_T].getFeatures()]
                 layers[db.names.LC_BOUNDARY_T].selectAll()
-                num_boundaries = layer.featureCount()
+                num_boundaries = layers[db.names.LC_BOUNDARY_T].featureCount()
 
             if boundary_t_ids:
                 boundary_topology_relation = {
@@ -102,10 +87,19 @@ class ToolBar(QObject):
                     db.names.LESS_BFS_T: db.names.LESS_BFS_T_LC_BOUNDARY_F
                 }
 
+                topology_affected_features = {
+                    db.names.POINT_BFS_T: 0,
+                    db.names.MORE_BFS_T: 0,
+                    db.names.LESS_BFS_T: 0
+                }
+
                 for topology_table_name, topology_boundary_field in boundary_topology_relation.items():
                     expression = QgsExpression('"{field}" in ({field_values})'.format(field=topology_boundary_field, field_values=', '.join("'{}'".format(v) for v in boundary_t_ids)))
                     features = LADMData.get_features_by_expression(layers[topology_table_name], db.names.T_ID_F, expression=expression)
                     select_ids_topology_table = [f.id() for f in features]
+
+                    # Number of records affected in each of the topology tables
+                    topology_affected_features[topology_table_name] = len(select_ids_topology_table)
 
                     if select_ids_topology_table:
                         with edit(layers[topology_table_name]):
@@ -124,8 +118,11 @@ class ToolBar(QObject):
                 self.iface.mapCanvas().refresh()
 
                 # topology tables are recalculated with the new boundaries
-                self.fill_topology_table_pointbfs(db, False)
-                self.fill_topology_tables_morebfs_less(db, False)
+                if topology_affected_features[db.names.POINT_BFS_T]:
+                    self.fill_topology_table_pointbfs(db, use_selection)
+
+                if topology_affected_features[db.names.MORE_BFS_T] + topology_affected_features[db.names.LESS_BFS_T] > 0:
+                    self.fill_topology_tables_morebfs_less(db, use_selection)
 
             else:
                 self.logger.info_msg(__name__, QCoreApplication.translate("ToolBar", "There are no boundaries to build."))
