@@ -182,8 +182,8 @@
       </Option>
       <Option value="Ingresando información a la capa INTERESADO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1090" type="double" name="component_pos_x"/>
-      <Option value="765" type="double" name="component_pos_y"/>
+      <Option value="1031.0871374865737" type="double" name="component_pos_x"/>
+      <Option value="804.0098684210525" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
       <Option value="ladm_col:insertfeaturestolayer_5" type="QString" name="id"/>
@@ -427,8 +427,8 @@
       </Option>
       <Option value="Extrayendo INTERESADOS Catastrales y Registrales" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1330" type="double" name="component_pos_x"/>
-      <Option value="855" type="double" name="component_pos_y"/>
+      <Option value="1316.4659640171858" type="double" name="component_pos_x"/>
+      <Option value="789.718179377014" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option type="List" name="dependencies">
         <Option type="Map">
@@ -709,8 +709,8 @@
       </Option>
       <Option value="Calculando SNR_T_Id_Predio" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="610" type="double" name="component_pos_x"/>
-      <Option value="945" type="double" name="component_pos_y"/>
+      <Option value="503.3199516648765" type="double" name="component_pos_x"/>
+      <Option value="866.7277121374866" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
       <Option value="native:fieldcalculator_2" type="QString" name="id"/>
@@ -1740,8 +1740,8 @@
       </Option>
       <Option value="Join entre SNC_PREDIO y GC_PREDIO, INI_PREDIO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1570" type="double" name="component_pos_x"/>
-      <Option value="135" type="double" name="component_pos_y"/>
+      <Option value="1593.0874731471536" type="double" name="component_pos_x"/>
+      <Option value="118.281484962406" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
       <Option value="native:joinattributestable_20" type="QString" name="id"/>
@@ -1819,8 +1819,8 @@
       </Option>
       <Option value="Join entre GC_CONSTRUCCION y GC_PREDIO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="370" type="double" name="component_pos_x"/>
-      <Option value="315" type="double" name="component_pos_y"/>
+      <Option value="382.79283029001084" type="double" name="component_pos_x"/>
+      <Option value="381.5821697099892" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
       <Option value="native:joinattributestable_22" type="QString" name="id"/>
@@ -2212,7 +2212,7 @@
       </Option>
       <Option value="Join entre SNR_TITULAR y SNR_TITULAR_DERECHO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="370" type="double" name="component_pos_x"/>
+      <Option value="370.79611976369495" type="double" name="component_pos_x"/>
       <Option value="585" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
@@ -2369,8 +2369,8 @@
       </Option>
       <Option value="Join entre SNR_DERECHO y SNR_PREDIO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="608.4625402792697" type="double" name="component_pos_x"/>
-      <Option value="1035" type="double" name="component_pos_y"/>
+      <Option value="629.1616541353384" type="double" name="component_pos_x"/>
+      <Option value="980.0677363050485" type="double" name="component_pos_y"/>
       <Option value="196.9250805585392" type="double" name="component_width"/>
       <Option type="List" name="dependencies">
         <Option type="Map">
@@ -2505,8 +2505,8 @@
       </Option>
       <Option value="Uniendo INTERESADOS catastrales y registrales" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="850" type="double" name="component_pos_x"/>
-      <Option value="765" type="double" name="component_pos_y"/>
+      <Option value="927.2236170784103" type="double" name="component_pos_x"/>
+      <Option value="661.5044307196564" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
       <Option value="native:mergevectorlayers_2" type="QString" name="id"/>
@@ -2826,7 +2826,7 @@
                 <Option value="1" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="if(T_id_6 is null, get_domain_code_from_value('d_booleanotipo','no',True,False), get_domain_code_from_value('d_booleanotipo','si',True,False))" type="QString" name="expression"/>
+                <Option value="if(T_id_6 is null, get_domain_code_from_value('d_booleanotipo','No',True,False), get_domain_code_from_value('d_booleanotipo','Si',True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tiene_fmi" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -2847,7 +2847,7 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="get_domain_code_from_value('d_booleanotipo','no',True,False)" type="QString" name="expression"/>
+                <Option value="get_domain_code_from_value('d_booleanotipo','No',True,False)" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tiene_area_registral" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -2966,7 +2966,7 @@
                 <Option value="1" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="336" type="QString" name="expression"/>
+                <Option value="if(get_domain_code_from_value('d_prediotipo',predio_tipo,True,False) is null, null, get_domain_code_from_value('d_prediotipo',predio_tipo,True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="predio_tipo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -3701,7 +3701,7 @@
                 <Option value="1" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="if(T_id_6 is null, get_domain_code_from_value('d_booleanotipo','no',True,False), get_domain_code_from_value('d_booleanotipo','si',True,False))" type="QString" name="expression"/>
+                <Option value="if(T_id_6 is null, get_domain_code_from_value('d_booleanotipo','No',True,False), get_domain_code_from_value('d_booleanotipo','Si',True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tiene_fmi" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -3722,7 +3722,7 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="get_domain_code_from_value('d_booleanotipo','no',True,False)" type="QString" name="expression"/>
+                <Option value="get_domain_code_from_value('d_booleanotipo','No',True,False)" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tiene_area_registral" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -3841,7 +3841,7 @@
                 <Option value="1" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="336" type="QString" name="expression"/>
+                <Option value="if(get_domain_code_from_value('d_prediotipo',predio_tipo,True,False) is null, null, get_domain_code_from_value('d_prediotipo',predio_tipo,True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="predio_tipo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4058,7 +4058,7 @@
                 <Option value="1" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="if(T_id_6 is null, get_domain_code_from_value('d_booleanotipo','no',True,False), get_domain_code_from_value('d_booleanotipo','si',True,False))" type="QString" name="expression"/>
+                <Option value="if(T_id_6 is null, get_domain_code_from_value('d_booleanotipo','No',True,False), get_domain_code_from_value('d_booleanotipo','Si',True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tiene_fmi" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4079,7 +4079,7 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="get_domain_code_from_value('d_booleanotipo','no',True,False)" type="QString" name="expression"/>
+                <Option value="get_domain_code_from_value('d_booleanotipo','No',True,False)" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tiene_area_registral" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4198,7 +4198,7 @@
                 <Option value="1" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="336" type="QString" name="expression"/>
+                <Option value="NULL" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="predio_tipo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4359,7 +4359,7 @@
                 <Option value="6" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="get_domain_code_from_value('d_booleanotipo','no',True,False)" type="QString" name="expression"/>
+                <Option value="get_domain_code_from_value('d_booleanotipo','No',True,False)" type="QString" name="expression"/>
                 <Option value="17" type="int" name="length"/>
                 <Option value="verifica_servidumbre" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4700,8 +4700,8 @@
       </Option>
       <Option value="Mapeando campos INTERESADOS CATASTRO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="610" type="double" name="component_pos_x"/>
-      <Option value="765" type="double" name="component_pos_y"/>
+      <Option value="643.437030075188" type="double" name="component_pos_x"/>
+      <Option value="694.9414607948441" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
       <Option value="native:refactorfields_6" type="QString" name="id"/>
@@ -4728,14 +4728,14 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="if (razon_social is null, get_domain_code_from_value('d_interesadotipo','Persona_natural',True,False), get_domain_code_from_value('d_interesadotipo','Persona_juridica',True,False))" type="QString" name="expression"/>
+                <Option value="if (razon_social is null, get_domain_code_from_value('d_interesadotipo','Persona_Natural',True,False), get_domain_code_from_value('d_interesadotipo','Persona_Juridica',True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tipo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
                 <Option value="4" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="418" type="QString" name="expression"/>
+                <Option value="coalesce(get_domain_code_from_value('d_interesadodocumentotipo',tipo_documento,True,False), get_domain_code_from_value('d_interesadodocumentotipo','Secuencial',True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tipo_documento" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4749,21 +4749,21 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="&quot;primer_nombre&quot;" type="QString" name="expression"/>
+                <Option value="primer_nombre" type="QString" name="expression"/>
                 <Option value="100" type="int" name="length"/>
                 <Option value="primer_nombre" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="&quot;segundo_nombre&quot;" type="QString" name="expression"/>
+                <Option value="segundo_nombre" type="QString" name="expression"/>
                 <Option value="100" type="int" name="length"/>
                 <Option value="segundo_nombre" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="&quot;primer_apellido&quot;" type="QString" name="expression"/>
+                <Option value="primer_apellido" type="QString" name="expression"/>
                 <Option value="100" type="int" name="length"/>
                 <Option value="primer_apellido" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4854,7 +4854,7 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="get_domain_code_from_value('d_booleanotipo','no',True,False)" type="QString" name="expression"/>
+                <Option value="get_domain_code_from_value('d_booleanotipo','No',True,False)" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="autoriza_notificacion_correo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4889,8 +4889,8 @@
       </Option>
       <Option value="Mapeando campos INTERESADOS REGISTRO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="850" type="double" name="component_pos_x"/>
-      <Option value="1035" type="double" name="component_pos_y"/>
+      <Option value="839.6504430719656" type="double" name="component_pos_x"/>
+      <Option value="1056.4952336197637" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option name="dependencies"/>
       <Option value="native:refactorfields_7" type="QString" name="id"/>
@@ -4917,14 +4917,14 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="if (get_paired_domain_value('snr_personatitulartipo', 'd_interesadotipo', tipo_persona) is null, get_domain_code_from_value('d_interesadotipo','Persona_natural',True,False), get_paired_domain_value('snr_personatitulartipo', 'd_interesadotipo', tipo_persona))" type="QString" name="expression"/>
+                <Option value="if (get_paired_domain_value('snr_personatitulartipo', 'd_interesadotipo', tipo_persona) is null, get_domain_code_from_value('d_interesadotipo','Persona_Natural',True,False), get_paired_domain_value('snr_personatitulartipo', 'd_interesadotipo', tipo_persona))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tipo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
                 <Option value="4" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="if (get_paired_domain_value('snr_documentotitulartipo', 'd_interesadodocumentotipo', tipo_documento) is null, get_domain_code_from_value('d_interesadodocumentotipo','Secuencial',True,False),get_paired_domain_value('snr_documentotitulartipo', 'd_interesadodocumentotipo', tipo_documento))" type="QString" name="expression"/>
+                <Option value="coalesce(get_domain_code_from_value('d_interesadodocumentotipo',tipo_documento,True,False), get_domain_code_from_value('d_interesadodocumentotipo','Secuencial',True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tipo_documento" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4938,14 +4938,14 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="&quot;primer_nombre&quot;" type="QString" name="expression"/>
+                <Option value="case&#xa;when nombres is null then&#xa;null&#xa;else&#xa;coalesce(string_to_array(nombres, ' ')[0], NULL)&#xa;end" type="QString" name="expression"/>
                 <Option value="100" type="int" name="length"/>
                 <Option value="primer_nombre" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="&quot;segundo_nombre&quot;" type="QString" name="expression"/>
+                <Option value="case&#xa;when nombres is null then&#xa;null&#xa;when array_length(string_to_array(nombres, ' ')) > 2 then&#xa;array_to_string(array_remove_at(string_to_array(nombres, ' '), 0), ' ')&#xa;when array_length(string_to_array(nombres, ' ')) = 2 then&#xa;coalesce(string_to_array(nombres, ' ')[1], NULL)&#xa;else&#xa;null&#xa;end" type="QString" name="expression"/>
                 <Option value="100" type="int" name="length"/>
                 <Option value="segundo_nombre" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -4959,7 +4959,7 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="&quot;segundo_apellido&quot;" type="QString" name="expression"/>
+                <Option value="substr(&quot;segundo_apellido&quot;,1, 100)" type="QString" name="expression"/>
                 <Option value="100" type="int" name="length"/>
                 <Option value="segundo_apellido" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -5106,7 +5106,7 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="get_domain_code_from_value('d_derechotipo','Sin_derecho',True,False)" type="QString" name="expression"/>
+                <Option value="get_domain_code_from_value('d_derechotipo','Sin_Derecho',True,False)" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tipo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -5204,7 +5204,7 @@
                 <Option value="10" type="int" name="type"/>
               </Option>
               <Option type="Map">
-                <Option value="if (get_domain_value_from_code('d_derechotipo', calidad_derecho_registro, False, False) = 'Dominio', get_paired_domain_value('snr_calidadderechotipo', 'd_derechotipo', calidad_derecho_registro), get_domain_code_from_value('d_derechotipo','Sin_derecho',True,False))" type="QString" name="expression"/>
+                <Option value="if (get_domain_value_from_code('d_derechotipo', calidad_derecho_registro, False, False) = 'Dominio', get_paired_domain_value('snr_calidadderechotipo', 'd_derechotipo', calidad_derecho_registro), get_domain_code_from_value('d_derechotipo','Sin_Derecho',True,False))" type="QString" name="expression"/>
                 <Option value="-1" type="int" name="length"/>
                 <Option value="tipo" type="QString" name="name"/>
                 <Option value="0" type="int" name="precision"/>
@@ -5451,6 +5451,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Construcción histórico" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5463,6 +5464,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Derecho" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5475,6 +5477,7 @@
         <Option value="0" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Dirección" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5487,6 +5490,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Fuente Administrativa" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5499,6 +5503,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="fuente_administrativa_derecho" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5511,6 +5516,7 @@
         <Option value="2" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Construcción" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5523,6 +5529,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="gc_copropiedad" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5535,6 +5542,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Datos Propiedad Horizontal Condominio" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5547,6 +5555,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Datos torre PH" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5559,6 +5568,7 @@
         <Option value="1" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Dirección" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5571,6 +5581,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Propietario" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5583,6 +5594,7 @@
         <Option value="2" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Terreno" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5595,6 +5607,7 @@
         <Option value="2" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Unidad Construcción" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5607,6 +5620,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Interesado" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5619,6 +5633,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Predio" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5631,6 +5646,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(SNR) Derecho" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5643,6 +5659,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(SNR) Fuente Cabida Linderos" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5655,6 +5672,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(SNR) Fuente Derecho" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5667,6 +5685,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(SNR) Titular" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5679,6 +5698,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="snr_titular_derecho" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5691,6 +5711,7 @@
         <Option value="2" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Terrenos históricos" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5703,6 +5724,7 @@
         <Option value="2" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="Unidad de Construcción historico" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5715,6 +5737,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(GC) Predio Catastro" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5727,6 +5750,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(Integración Insumos) Predio Insumos" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5739,6 +5763,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
       <Option value="(SNR) Predio Registro" type="QString" name="description"/>
       <Option value="0" type="int" name="flags"/>
       <Option value="" type="QString" name="help"/>
@@ -5789,8 +5814,8 @@
       </Option>
       <Option value="CONSTRUCCION" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1090" type="double" name="component_pos_x"/>
-      <Option value="315" type="double" name="component_pos_y"/>
+      <Option value="1085.7540279269601" type="double" name="component_pos_x"/>
+      <Option value="283.1552094522019" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="CONSTRUCCION" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -5894,8 +5919,8 @@
       </Option>
       <Option value="GCCONSTRUCCION" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="130" type="double" name="component_pos_x"/>
-      <Option value="315" type="double" name="component_pos_y"/>
+      <Option value="109.30088614393125" type="double" name="component_pos_x"/>
+      <Option value="309.16178839957036" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="GCCONSTRUCCION" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -5999,8 +6024,8 @@
       </Option>
       <Option value="GCPROPIETARIO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="130" type="double" name="component_pos_x"/>
-      <Option value="765" type="double" name="component_pos_y"/>
+      <Option value="110.89312567132117" type="double" name="component_pos_x"/>
+      <Option value="775.3495569280344" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="GCPROPIETARIO" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -6041,8 +6066,8 @@
       </Option>
       <Option value="GCUNIDADCONSTRUCCION" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="130" type="double" name="component_pos_x"/>
-      <Option value="225" type="double" name="component_pos_y"/>
+      <Option value="117.79283029001073" type="double" name="component_pos_x"/>
+      <Option value="195.80894199785178" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="GCUNIDADCONSTRUCCION" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -6062,8 +6087,8 @@
       </Option>
       <Option value="INTERESADO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1330" type="double" name="component_pos_x"/>
-      <Option value="765" type="double" name="component_pos_y"/>
+      <Option value="1150.8730531686358" type="double" name="component_pos_x"/>
+      <Option value="654.3393528464017" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="INTERESADO" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -6167,8 +6192,8 @@
       </Option>
       <Option value="SNRTITULAR" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="130" type="double" name="component_pos_x"/>
-      <Option value="495" type="double" name="component_pos_y"/>
+      <Option value="115.66984425349085" type="double" name="component_pos_x"/>
+      <Option value="516.4952336197638" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="SNRTITULAR" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -6188,8 +6213,8 @@
       </Option>
       <Option value="SNRTITULARDERECHO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="370" type="double" name="component_pos_x"/>
-      <Option value="495" type="double" name="component_pos_y"/>
+      <Option value="389.1068743286788" type="double" name="component_pos_x"/>
+      <Option value="457.5823711063373" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="SNRTITULARDERECHO" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -6209,8 +6234,8 @@
       </Option>
       <Option value="TERRENO" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1570" type="double" name="component_pos_x"/>
-      <Option value="495" type="double" name="component_pos_y"/>
+      <Option value="1733.204551557465" type="double" name="component_pos_x"/>
+      <Option value="498.98059881847473" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="TERRENO" type="QString" name="name"/>
       <Option value="true" type="bool" name="outputs_collapsed"/>
@@ -6272,8 +6297,8 @@
       </Option>
       <Option value="inipredio" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1090" type="double" name="component_pos_x"/>
-      <Option value="45" type="double" name="component_pos_y"/>
+      <Option value="1117.5988184747582" type="double" name="component_pos_x"/>
+      <Option value="26.423872180451127" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="inipredio" type="QString" name="name"/>
       <Option value="false" type="bool" name="outputs_collapsed"/>
@@ -6293,8 +6318,8 @@
       </Option>
       <Option value="sncpredio" type="QString" name="component_description"/>
       <Option value="30" type="double" name="component_height"/>
-      <Option value="1630" type="double" name="component_pos_x"/>
-      <Option value="45" type="double" name="component_pos_y"/>
+      <Option value="1356.1348012889366" type="double" name="component_pos_x"/>
+      <Option value="23.504766380236305" type="double" name="component_pos_y"/>
       <Option value="200" type="double" name="component_width"/>
       <Option value="sncpredio" type="QString" name="name"/>
       <Option value="false" type="bool" name="outputs_collapsed"/>
