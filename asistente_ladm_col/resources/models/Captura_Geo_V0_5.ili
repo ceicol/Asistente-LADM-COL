@@ -12,6 +12,7 @@ VERSION "2020-07-21"  =
        */
       !!@ ili2db.dispName = "Acuerdo"
       Acuerdo,
+      !!@ ili2db.dispName = "Desacuerdo"
       Desacuerdo
     );
 
@@ -399,7 +400,7 @@ VERSION "2020-07-21"  =
 
     D_BooleanoTipo = (
       !!@ ili2db.dispName = "Sí"
-      si,
+      Si,
       !!@ ili2db.dispName = "No"
       no
     );
@@ -482,7 +483,7 @@ VERSION "2020-07-21"  =
        * Dentro de la categoría de suelo de expansión podrán incluirse áreas de desarrollo concertado, a través de procesos que definan la conveniencia y las condiciones para su desarrollo mediante su adecuación y habilitación urbanística a cargo de sus propietarios, pero cuyo desarrollo estará condicionado a la adecuación previa de las áreas programadas. (Artículo 32, Ley 388 de 1997)
        */
       !!@ ili2db.dispName = "Expansión urbana"
-      Expansion_urbana
+      Expansion_Urbana
     );
 
     /** Valores para indicar el tipo de condición de predio
@@ -534,7 +535,7 @@ VERSION "2020-07-21"  =
       /** Inmuebles que siendo de dominio de la Nación, o una entidad territorial o de particulares, están destinados al uso de los habitantes.
        */
       !!@ ili2db.dispName = "Bien de uso público"
-      Bien_uso_publico
+      Bien_Uso_Publico
     );
 
     D_ConstruccionPlantaTipo = (
@@ -638,7 +639,7 @@ VERSION "2020-07-21"  =
       /** No cuenta información de derecho
        */
       !!@ ili2db.dispName = "Sin derecho"
-      Sin_derecho
+      Sin_Derecho
     );
 
     /** Uso económico de la propiedad inmobiliaria.
@@ -915,24 +916,24 @@ VERSION "2020-07-21"  =
     !!@ ili2db.dispName = "D_GrupoInteresado_Tipo"
     D_GrupoInteresadoTipo = (
       !!@ ili2db.dispName = "Grupo Civil"
-      Grupo_civil,
+      Grupo_Civil,
       !!@ ili2db.dispName = "Grupo Empresarial"
-      Grupo_empresarial,
+      Grupo_Empresarial,
       !!@ ili2db.dispName = "Grupo etnico"
-      Grupo_etnico,
+      Grupo_Etnico,
       !!@ ili2db.dispName = "Grupo mixto"
-      Grupo_mixto
+      Grupo_Mixto
     );
 
     D_InteresadoDocumentoTipo = (
       /** Es un documento emitido por la Registraduría Nacional del Estado Civil para permitir la identificación personal de los ciudadanos.
        */
       !!@ ili2db.dispName = "Cédula de ciudadanía"
-      Cedula_ciudadania,
+      Cedula_Ciudadania,
       /** Es el documento que cumple los fines de identificación de los extranjeros en el territorio nacional y su utilización deberá estar acorde con la visa otorgada al extranjero.
        */
       !!@ ili2db.dispName = "Cédula de extranjería"
-      Cedula_extranjeria,
+      Cedula_Extranjeria,
       /** El Número de Identificación Tributaria (NIT) es un código privado, secreto e intransferible que solamente debe conocer el contribuyente.
        */
       !!@ ili2db.dispName = "NIT"
@@ -940,14 +941,14 @@ VERSION "2020-07-21"  =
       /** Es el documento oficial que hace las veces de identificación para los menores de edad entre los 7 y los 18 años.
        */
       !!@ ili2db.dispName = "Tarjeta de identidad"
-      Tarjeta_identidad,
+      Tarjeta_Identidad,
       /** Registro donde se hacen constar por autoridades competentes los nacimientos, matrimonios, defunciones y demás hechos relativos al estado civil de las personas. En el modelo se tendrá en cuenta el número de registro como identificación personal de las personas de 0 a 7 años.
        */
       !!@ ili2db.dispName = "Registro civil"
-      Registro_civil,
+      Registro_Civil,
       /** Es un consecutivo asignado automáticamente en registro en lugar del número de la identificación de la persona que hace el trámite, se usa especialmente en trámites de construcción cuando el proyecto está a nombre de una Fiducia el cual tiene el mismo número del banco.
        */
-      !!@ ili2db.dispName = "Secuencial"
+      !!@ ili2db.dispName = "Secuencial SNR"
       Secuencial
     );
 
@@ -955,11 +956,11 @@ VERSION "2020-07-21"  =
       /** Se refiere a la persona humana.
        */
       !!@ ili2db.dispName = "Persona natural"
-      Persona_natural,
+      Persona_Natural,
       /** Se llama persona jurídica, una persona ficticia, capaz de ejercer derechos y contraer obligaciones civiles, y de ser representada judicial y extrajudicialmente. Las personas jurídicas son de dos especies: corporaciones y fundaciones de beneficencia pública.
        */
       !!@ ili2db.dispName = "Persona jurídica"
-      Persona_juridica
+      Persona_Juridica
     );
 
     D_MobiliarioTipo = (
@@ -1292,7 +1293,7 @@ VERSION "2020-07-21"  =
       /** Son los predios adjudicados a comunidades pertenecientes a grupos étnicos en el marco del reconocimiento de los resguardos legalmente constituidos según el Decreto 2164 de 1995 o de las propiedades colectivas de comunidades negras conforme Ley 70 de 1993.
        */
       !!@ ili2db.dispName = "Territorio colectivo"
-      Territorio_colectivo,
+      Territorio_Colectivo,
       /** Son bienes inmuebles que se encuentran dentro de territorio respectivo a cargo de la Nación, sin dueño aparente o conocido
        */
       !!@ ili2db.dispName = "Vacante"
@@ -1347,11 +1348,11 @@ VERSION "2020-07-21"  =
       /** Punto referido a los puntos limitantes con elementos hidrográficos que por su condición pueden variar su límite con el tiempo.
        */
       !!@ ili2db.dispName = "Punto dinámico"
-      Punto_dinamico,
+      Punto_Dinamico,
       /** Punto referido a los elementos naturales de la vegetación  como los árboles, arbustos o cualquier otra especie de la fauna.
        */
       !!@ ili2db.dispName = "Elemento natural"
-      Elemento_natural,
+      Elemento_Natural,
       /** Punto referido a los elementos piedra o rocas.
        */
       !!@ ili2db.dispName = "Piedra"
@@ -1359,7 +1360,7 @@ VERSION "2020-07-21"  =
       /** Puntos referido a las áreas de campos abiertos, zonas boscosas, desérticas o cualquier otro tipo de espacio donde no se aprecia una clara delimitación.
        */
       !!@ ili2db.dispName = "Sin materialización"
-      Sin_materializacion,
+      Sin_Materializacion,
       /** Puntos referidos a los mojones utilizados en topografía que tienen datos de coordenadas espaciales.
        */
       !!@ ili2db.dispName = "Mojón"
@@ -1478,19 +1479,19 @@ VERSION "2020-07-21"  =
       /** Sin atención por parte de personas. Predio Desocupado.
        */
       !!@ ili2db.dispName = "No hay nadie"
-      No_hay_nadie,
+      No_Hay_Nadie,
       /** No permitieron acceso al predio.
        */
       !!@ ili2db.dispName = "No permitieron acceso"
-      No_permitieron_acceso,
+      No_Permitieron_Acceso,
       /** No hay adulto en el momento de la visita.
        */
       !!@ ili2db.dispName = "Menor de Edad"
-      Menor_de_Edad,
+      Menor_De_Edad,
       /** Por temas de seguridad asociados a orden público no es posible el acceso.
        */
       !!@ ili2db.dispName = "Situación de Orden Público"
-      Situacion_de_Orden_Publico,
+      Situacion_De_Orden_Publico,
       /** Por limitaciones relacionadas con la topografía o accidentes geográficos no hubo acceso al predio.
        */
       !!@ ili2db.dispName = "Zona de difícil acceso"
@@ -1505,7 +1506,7 @@ VERSION "2020-07-21"  =
       !!@ ili2db.dispName = "Reconocedor"
       Reconocedor,
       !!@ ili2db.dispName = "Coordinador de grupo"
-      Coordinador_grupo,
+      Coordinador_Grupo,
       !!@ ili2db.dispName = "Coordinador general"
       Coordinador_general
     );
@@ -1741,7 +1742,7 @@ VERSION "2020-07-21"  =
       /** Tipo de unidad de construcción anexa, por ejemplo, piscinas, cobertizos, canchas de tenis, toboganes.
        */
       !!@ ili2db.dispName = "Anexo"
-      EnumElement95
+      Anexo
     );
 
     D_UsoUConsTipo = (
