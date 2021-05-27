@@ -6842,7 +6842,7 @@ def my_form_open(dialog, layer, feature):
           </attributeEditorContainer>
           <attributeEditorContainer name="Condición del predio" showLabel="1" columnCount="1" groupBox="1" visibilityExpressionEnabled="0" visibilityExpression="">
             <attributeEditorField name="condicion_predio" showLabel="1" index="18"/>
-            <attributeEditorContainer name="Información general del PH" showLabel="1" columnCount="1" groupBox="1" visibilityExpressionEnabled="1" visibilityExpression="attribute(get_feature('d_condicionprediotipo', 'iliCode', 'PH.Matriz'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Condominio.Matriz'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Parque_cementerio.Matriz'), 'T_Id') = condicion_predio">
+            <attributeEditorContainer name="Información general del PH" showLabel="1" columnCount="1" groupBox="1" visibilityExpressionEnabled="1" visibilityExpression="attribute(get_feature('d_condicionprediotipo', 'iliCode', 'PH.Matriz'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Condominio.Matriz'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Parque_Cementerio.Matriz'), 'T_Id') = condicion_predio">
               <attributeEditorField name="total_unidades_privadas" showLabel="1" index="19"/>
               <attributeEditorField name="numero_torres" showLabel="1" index="20"/>
               <attributeEditorField name="area_total_construida_comun" showLabel="1" index="21"/>
@@ -6852,7 +6852,7 @@ def my_form_open(dialog, layer, feature):
               <attributeEditorField name="area_total_terreno_privada" showLabel="1" index="25"/>
               <attributeEditorField name="area_total_terreno" showLabel="1" index="26"/>
             </attributeEditorContainer>
-            <attributeEditorContainer name="Información Predio PH Unidad Predial" showLabel="1" columnCount="1" groupBox="1" visibilityExpressionEnabled="1" visibilityExpression="attribute(get_feature('d_condicionprediotipo', 'iliCode', 'PH.Unidad_Predial'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Condominio.Unidad_Predial'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Parque_cementerio.Unidad_Predial'), 'T_Id') = condicion_predio">
+            <attributeEditorContainer name="Información Predio PH Unidad Predial" showLabel="1" columnCount="1" groupBox="1" visibilityExpressionEnabled="1" visibilityExpression="attribute(get_feature('d_condicionprediotipo', 'iliCode', 'PH.Unidad_Predial'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Condominio.Unidad_Predial'), 'T_Id') = condicion_predio or attribute(get_feature('d_condicionprediotipo', 'iliCode', 'Parque_Cementerio.Unidad_Predial'), 'T_Id') = condicion_predio">
               <attributeEditorField name="predio_matriz" showLabel="1" index="27"/>
               <attributeEditorField name="coeficiente" showLabel="1" index="28"/>
             </attributeEditorContainer>
