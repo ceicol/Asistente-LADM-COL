@@ -2875,6 +2875,8 @@ VERSION "2020-07-21"  =
       Correo_Electronico : TEXT*100;
       !!@ ili2db.dispName = "Observaciones"
       Observaciones : TEXT*1000;
+      !!@ ili2db.dispName = "Etiqueta"
+      Etiqueta : TEXT*255;
     END Predio;
 
     !!@ ili2db.dispName = "Punto"
@@ -2908,6 +2910,8 @@ VERSION "2020-07-21"  =
       Area_terreno : MANDATORY 0.0 .. 99999999999999.9 [LADM_COL_V3_0.m2];
       !!@ ili2db.dispName = "Proyección"
       proyeccion : TEXT*20;
+      !!@ ili2db.dispName = "Etiqueta"
+      Etiqueta : TEXT*255;
       geometria : ISO19107_PLANAS_V3_0.GM_MultiSurface3D;
     END Terreno;
 
@@ -2993,6 +2997,8 @@ VERSION "2020-07-21"  =
        */
       !!@ ili2db.dispName = "Observaciones"
       Observaciones : TEXT;
+      !!@ ili2db.dispName = "Etiqueta"
+      Etiqueta : TEXT*255;
       geometria : ISO19107_PLANAS_V3_0.GM_MultiSurface3D;
     END UnidadConstruccion;
 
