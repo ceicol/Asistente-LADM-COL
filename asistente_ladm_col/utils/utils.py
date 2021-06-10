@@ -279,13 +279,8 @@ def get_extent_for_processing(layer, scale=1.5):
     layer.updateExtents(True)  # Required by GeoPackage, probably until EPSG:9377 is officially included in QGIS
     extent = layer.extent()
 
-    # the layer is cloned in order to be able to make a correct calculation of the bbox
-    layer.selectAll()
-    clone_layer = processing.run("native:saveselectedfeatures", {'INPUT': layer, 'OUTPUT': 'memory:'})['OUTPUT']
-    layer.removeSelection()
-
     extent_layer = processing.run("native:polygonfromlayerextent", {
-        'INPUT': clone_layer,
+        'INPUT': layer,
         'ROUND_TO': 0,
         'OUTPUT': 'TEMPORARY_OUTPUT'})['OUTPUT']
     extent = extent_layer.extent()
