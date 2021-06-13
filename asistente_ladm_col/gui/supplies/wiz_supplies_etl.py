@@ -347,7 +347,8 @@ class SuppliesETLWizard(QWizard, WIZARD_UI):
         dlg.show_tip(QCoreApplication.translate("SuppliesETLWizard", "Configure where do you want the data to be imported."))
         dlg.set_db_source(self.db_source)
 
-        dlg.set_required_models([LADMNames.SUPPLIES_MODEL_KEY])
+        # TODO: Model validation is disabled to enable the option to run ETL field data capture to survey, this should be improved.
+        # dlg.set_required_models([LADMNames.SUPPLIES_MODEL_KEY])
         dlg.set_tab_pages_list([SETTINGS_CONNECTION_TAB_INDEX, SETTINGS_MODELS_TAB_INDEX])
         dlg.set_action_type(EnumDbActionType.IMPORT_FROM_ETL)
 
