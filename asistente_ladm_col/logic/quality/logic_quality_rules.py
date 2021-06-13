@@ -59,7 +59,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E401008,
                                                             QUALITY_RULE_ERROR_CODE_E401009,
                                                             QUALITY_RULE_ERROR_CODE_E401010,
-                                                            QUALITY_RULE_ERROR_CODE_E401011)
+                                                            QUALITY_RULE_ERROR_CODE_E401011,
+                                                            QUALITY_RULE_ERROR_CODE_E420101)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -379,6 +380,12 @@ class LogicQualityRules:
             self.logger.error_msg(__name__, "Error executing query for rule {}: {}".format(rule.rule_name, records))
 
         return self.return_message(db, rule.rule_name, error_layer)
+
+    def check_fdc_parcels_with_invalid_parcel_type(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_fdc_parcels_with_invalid_parcel_type(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420101)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):

@@ -88,7 +88,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E401901,
                                                             QUALITY_RULE_ERROR_CODE_E402001,
                                                             QUALITY_RULE_ERROR_CODE_E402101,
-                                                            QUALITY_RULE_ERROR_CODE_E402201)
+                                                            QUALITY_RULE_ERROR_CODE_E402201,
+                                                            QUALITY_RULE_ERROR_CODE_E420101)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -202,6 +203,7 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.DUPLICATE_RECORDS_IN_RIGHT: QCoreApplication.translate("TranslatableConfigStrings", "Right should not have duplicate records"),
             EnumQualityRule.Logic.DUPLICATE_RECORDS_IN_RESTRICTION: QCoreApplication.translate("TranslatableConfigStrings", "Restriction should not have duplicate records"),
             EnumQualityRule.Logic.DUPLICATE_RECORDS_IN_ADMINISTRATIVE_SOURCE: QCoreApplication.translate("TranslatableConfigStrings", "Administrative source should not have duplicate records"),
+            EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel type should not be null"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -298,6 +300,9 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E402001: QCoreApplication.translate("TranslatableConfigStrings", "Derecho no debe tener registros repetidos"),
             QUALITY_RULE_ERROR_CODE_E402101: QCoreApplication.translate("TranslatableConfigStrings", "Restricción no debe tener registros repetidos"),
             QUALITY_RULE_ERROR_CODE_E402201: QCoreApplication.translate("TranslatableConfigStrings", "Fuente Administrativa no debe tener registros repetidos"),
+
+            QUALITY_RULE_ERROR_CODE_E420101: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de predio no puede ser null"),
+
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")
         }
