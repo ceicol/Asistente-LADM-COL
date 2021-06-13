@@ -481,7 +481,8 @@ DB_MAPPING_CONFIG = {
         "Captura_Geo.Captura_Geo.Predio": {QueryNames.VARIABLE_NAME: "FDC_PARCEL_T", QueryNames.FIELDS_DICT: {
             "Captura_Geo.Captura_Geo.Predio.Numero_Predial": "FDC_PARCEL_T_PARCEL_NUMBER_F",
             "Captura_Geo.Captura_Geo.predio_reconocedores.reconocedor..Captura_Geo.Captura_Geo.Usuarios": "FDC_PARCEL_T_SURVEYOR_F",
-            "Captura_Geo.Captura_Geo.Predio.Predio_Matriz": "FDC_PARCEL_T_PARENT_F"
+            "Captura_Geo.Captura_Geo.Predio.Predio_Matriz": "FDC_PARCEL_T_PARENT_F",
+            "Captura_Geo.Captura_Geo.Predio.Predio_Tipo": "FDC_PARCEL_T_PARCEL_TYPE_F"
         }},
         # "Captura_Geo.Captura_Geo.predio_terreno": {QueryNames.VARIABLE_NAME: "FDC_PARCEL_PLOT_T", QueryNames.FIELDS_DICT: {}},
         "Captura_Geo.Captura_Geo.Punto_control": {QueryNames.VARIABLE_NAME: "FDC_CONTROL_POINT_T",QueryNames.FIELDS_DICT: {}},
