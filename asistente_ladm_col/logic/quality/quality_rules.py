@@ -152,8 +152,10 @@ class QualityRules:
         elif id_quality_rule == EnumQualityRule.Logic.DUPLICATE_RECORDS_IN_ADMINISTRATIVE_SOURCE:
             msg, level = self.__check_duplicate_records_in_table(db, db.names.LC_ADMINISTRATIVE_SOURCE_T, id_quality_rule)
 
-        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL:
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL:
             msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_parcel_type(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_condition_type(db)
 
         return msg, level
 

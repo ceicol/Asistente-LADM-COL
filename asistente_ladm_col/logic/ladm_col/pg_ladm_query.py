@@ -386,13 +386,13 @@ class PGLADMQuery(QGISLADMQuery):
         return db.execute_sql_query(query)
 
     @staticmethod
-    def get_fdc_parcels_with_invalid_parcel_type(db):
+    def get_invalid_null_values(db, table, field):
         query = """SELECT {t_id}, {t_ili_tid}
-                   FROM {schema}.{fdc_parcel_t}
-                   WHERE {fdc_parcel_t_parcel_type_f} IS NULL
+                   FROM {schema}.{table}
+                   WHERE {field} IS NULL
                  """.format(t_id=db.names.T_ID_F,
                             t_ili_tid=db.names.T_ILI_TID_F,
                             schema=db.schema,
-                            fdc_parcel_t=db.names.FDC_PARCEL_T,
-                            fdc_parcel_t_parcel_type_f=db.names.FDC_PARCEL_T_PARCEL_TYPE_F)
+                            table=table,
+                            field=field)
         return db.execute_sql_query(query)
