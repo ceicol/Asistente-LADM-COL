@@ -443,5 +443,5 @@ class QGISLADMQuery:
         raise NotImplementedError
 
     @staticmethod
-    def get_fdc_parcels_with_invalid_parcel_type(db):
+    def get_invalid_null_values(db):
         raise NotImplementedError

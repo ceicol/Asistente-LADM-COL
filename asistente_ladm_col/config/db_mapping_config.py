@@ -2,6 +2,11 @@ from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.config.query_names import QueryNames
 
 
+
+
+
+
+
 DB_MAPPING_CONFIG = {
     LADMNames.LADM_COL_MODEL_KEY: {
         "LADM_COL.LADM_Nucleo.COL_EstadoDisponibilidadTipo": {QueryNames.VARIABLE_NAME: "COL_AVAILABILITY_TYPE_D", QueryNames.FIELDS_DICT: {}},
@@ -482,7 +487,47 @@ DB_MAPPING_CONFIG = {
             "Captura_Geo.Captura_Geo.Predio.Numero_Predial": "FDC_PARCEL_T_PARCEL_NUMBER_F",
             "Captura_Geo.Captura_Geo.predio_reconocedores.reconocedor..Captura_Geo.Captura_Geo.Usuarios": "FDC_PARCEL_T_SURVEYOR_F",
             "Captura_Geo.Captura_Geo.Predio.Predio_Matriz": "FDC_PARCEL_T_PARENT_F",
-            "Captura_Geo.Captura_Geo.Predio.Predio_Tipo": "FDC_PARCEL_T_PARCEL_TYPE_F"
+            "Captura_Geo.Captura_Geo.Predio.Predio_Tipo": "FDC_PARCEL_T_PARCEL_TYPE_F",
+            # "Captura_Geo.Captura_Geo.Predio.Area_Registral_M2": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Area_Total_Construida": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Area_Total_Construida_Comun": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Area_Total_Construida_Privada": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Area_Total_Terreno": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Area_Total_Terreno_Comun": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Area_Total_Terreno_Privada": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Categoria_suelo": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Celular": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Clase_Suelo_Registro": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Codigo_ORIP": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Coeficiente": "FDC_PARCEL_T_F",
+            "Captura_Geo.Captura_Geo.Predio.Condicion_Predio": "FDC_PARCEL_T_CONDITION_F",
+            # "Captura_Geo.Captura_Geo.Predio.Correo_Electronico": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Departamento_municipio": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Destinacion_Economica": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Etiqueta": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Fecha_Visita_predial": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Id_Operacion": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Matricula_Inmobiliaria": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Nombre_Quien_Atendio": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Numero_Documento_Quien_Atendio": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Numero_Predial_Anterior": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Numero_Torres": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.NUPRE": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Observaciones": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Relacion_Con_Predio": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Resultado_Visita": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Suscribe_Acta_Colindancia": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Tiene_Area_Registral": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Tiene_FMI": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Tipo_Documento_Quien_Atendio": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Total_Unidades_Privadas": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Validacion_Condicion_Predio": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Validacion_Datos_Catastrales": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Validacion_Datos_Localizacion": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Validacion_Datos_Registrales": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Validacion_derechos": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Validacion_Destinacion_economica": "FDC_PARCEL_T_F",
+            # "Captura_Geo.Captura_Geo.Predio.Validacion_Tipo_Predio": "FDC_PARCEL_T_F"
         }},
         # "Captura_Geo.Captura_Geo.predio_terreno": {QueryNames.VARIABLE_NAME: "FDC_PARCEL_PLOT_T", QueryNames.FIELDS_DICT: {}},
         "Captura_Geo.Captura_Geo.Punto_control": {QueryNames.VARIABLE_NAME: "FDC_CONTROL_POINT_T",QueryNames.FIELDS_DICT: {}},

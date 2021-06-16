@@ -118,7 +118,8 @@ QUALITY_RULE_ERROR_CODE_E402001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E402101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.DUPLICATE_RECORDS_IN_RESTRICTION.value) + '01'
 QUALITY_RULE_ERROR_CODE_E402201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.DUPLICATE_RECORDS_IN_ADMINISTRATIVE_SOURCE.value) + '01'
 
-QUALITY_RULE_ERROR_CODE_E420101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E420101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E420201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -691,15 +692,26 @@ class QualityRuleConfig:
                             QUALITY_RULE_ERROR_CODE_E402201
                         ]
                     },
-                    EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL: {
-                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL,
-                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL],
-                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_tipo_null"),
+                    EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_tipo_predio_es_null"),
                         QUALITY_RULE_TABLE_FIELDS: [
                             QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E420101
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_condicion_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E420201
                         ]
                     }
                 }

@@ -358,7 +358,8 @@ def get_role_config():
                 ACTION_MOVE_NODES],
             ROLE_QUALITY_RULES: [
                 EnumQualityRule.Polygon.OVERLAPS_IN_FDC_PLOTS,
-                EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL
+                EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL
             ],
             ROLE_GUI_CONFIG: field_admin_role_gui
         },
@@ -377,7 +378,8 @@ def get_role_config():
                 ACTION_MOVE_NODES],
             ROLE_QUALITY_RULES: [
                 EnumQualityRule.Polygon.OVERLAPS_IN_FDC_PLOTS,
-                EnumQualityRule.Logic.FDC_PARCEL_TYPE_IS_NULL
+                EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL
             ],
             ROLE_GUI_CONFIG: field_coordinator_role_gui
         },
