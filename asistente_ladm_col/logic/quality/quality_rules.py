@@ -156,6 +156,20 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_parcel_type(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL:
             msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_condition_type(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_land_caterogy(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_land_class(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_economic_destination(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_date_of_property_visit(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_visit_result(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_has_register_area(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_has_fmi(db)
 
         return msg, level
 

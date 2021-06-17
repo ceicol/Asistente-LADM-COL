@@ -90,7 +90,14 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E402101,
                                                             QUALITY_RULE_ERROR_CODE_E402201,
                                                             QUALITY_RULE_ERROR_CODE_E420101,
-                                                            QUALITY_RULE_ERROR_CODE_E420201)
+                                                            QUALITY_RULE_ERROR_CODE_E420201,
+                                                            QUALITY_RULE_ERROR_CODE_E420301,
+                                                            QUALITY_RULE_ERROR_CODE_E420401,
+                                                            QUALITY_RULE_ERROR_CODE_E420501,
+                                                            QUALITY_RULE_ERROR_CODE_E420601,
+                                                            QUALITY_RULE_ERROR_CODE_E420701,
+                                                            QUALITY_RULE_ERROR_CODE_E420801,
+                                                            QUALITY_RULE_ERROR_CODE_E420901)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -206,6 +213,13 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.DUPLICATE_RECORDS_IN_ADMINISTRATIVE_SOURCE: QCoreApplication.translate("TranslatableConfigStrings", "Administrative source should not have duplicate records"),
             EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel type should not be null"),
             EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel condition should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel land category should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel land class should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel economic destination should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel date of property visit should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel visit result should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel has register area should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel has fmi should not be null"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -305,6 +319,13 @@ class TranslatableConfigStrings(QObject):
 
             QUALITY_RULE_ERROR_CODE_E420101: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de predio no puede ser null"),
             QUALITY_RULE_ERROR_CODE_E420201: QCoreApplication.translate("TranslatableConfigStrings", "La condición de predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E420301: QCoreApplication.translate("TranslatableConfigStrings", "La categoría del suelo del predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E420401: QCoreApplication.translate("TranslatableConfigStrings", "La clase de suelo del predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E420501: QCoreApplication.translate("TranslatableConfigStrings", "La destinación económica del predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E420601: QCoreApplication.translate("TranslatableConfigStrings", "La fecha de visita predial del predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E420701: QCoreApplication.translate("TranslatableConfigStrings", "El resultado de la visita del predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E420801: QCoreApplication.translate("TranslatableConfigStrings", "El atributo tiene área registral del  predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E420901: QCoreApplication.translate("TranslatableConfigStrings", "El atributo tiene folio de matrícula del predio no puede ser null"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")

@@ -359,7 +359,14 @@ def get_role_config():
             ROLE_QUALITY_RULES: [
                 EnumQualityRule.Polygon.OVERLAPS_IN_FDC_PLOTS,
                 EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL,
-                EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL
+                EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL
             ],
             ROLE_GUI_CONFIG: field_admin_role_gui
         },
@@ -379,7 +386,14 @@ def get_role_config():
             ROLE_QUALITY_RULES: [
                 EnumQualityRule.Polygon.OVERLAPS_IN_FDC_PLOTS,
                 EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL,
-                EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL
+                EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL
             ],
             ROLE_GUI_CONFIG: field_coordinator_role_gui
         },
