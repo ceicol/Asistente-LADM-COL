@@ -283,3 +283,17 @@ class MSSQLLADMQuery(QGISLADMQuery):
                             table=table,
                             field=field)
         return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_right_with_invalid_right_type(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                   FROM {schema}.{fdc_right_t}
+                   WHERE {fdc_right_t_type_f}  = (select {t_id} from {schema}.{fdc_right_t_type_d} where {ilicode} = 'Sin_Derecho')
+                 """.format(t_id=db.names.T_ID_F,
+                            t_ili_tid=db.names.T_ILI_TID_F,
+                            ilicode=db.names.ILICODE_F,
+                            schema=db.schema,
+                            fdc_right_t=db.names.FDC_RIGHT_T,
+                            fdc_right_t_type_f=db.names.FDC_RIGHT_T_TYPE_F,
+                            fdc_right_t_type_d=db.names.FDC_RIGHT_TYPE_D)
+        return db.execute_sql_query(query)
