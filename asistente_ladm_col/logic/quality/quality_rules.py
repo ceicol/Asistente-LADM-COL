@@ -153,23 +153,37 @@ class QualityRules:
             msg, level = self.__check_duplicate_records_in_table(db, db.names.LC_ADMINISTRATIVE_SOURCE_T, id_quality_rule)
 
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_parcel_type(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_parcel_type(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_condition_type(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_condition_type(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_land_caterogy(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_land_caterogy(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_land_class(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_land_class(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_economic_destination(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_economic_destination(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_date_of_property_visit(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_date_of_property_visit(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_visit_result(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_visit_result(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_has_register_area(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_has_register_area(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL:
-            msg, level = self.logic_quality_rules.check_fdc_parcels_with_invalid_has_fmi(db)
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_has_fmi(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_document_type_of_who_attended_the_visit(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_document_number_of_who_attended_the_visit(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_name_of_who_attended_the_visit(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_who_attend_the_visit_relation_with_the_property(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_right_with_invalid_right_fraccion(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_residence_department(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL:
+            msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_residence_municipality(db)
 
         return msg, level
 

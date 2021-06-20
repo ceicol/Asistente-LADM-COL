@@ -68,7 +68,14 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E420601,
                                                             QUALITY_RULE_ERROR_CODE_E420701,
                                                             QUALITY_RULE_ERROR_CODE_E420801,
-                                                            QUALITY_RULE_ERROR_CODE_E420901)
+                                                            QUALITY_RULE_ERROR_CODE_E420901,
+                                                            QUALITY_RULE_ERROR_CODE_E421001,
+                                                            QUALITY_RULE_ERROR_CODE_E421101,
+                                                            QUALITY_RULE_ERROR_CODE_E421201,
+                                                            QUALITY_RULE_ERROR_CODE_E421301,
+                                                            QUALITY_RULE_ERROR_CODE_E421401,
+                                                            QUALITY_RULE_ERROR_CODE_E421501,
+                                                            QUALITY_RULE_ERROR_CODE_E421601)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -389,7 +396,7 @@ class LogicQualityRules:
 
         return self.return_message(db, rule.rule_name, error_layer)
 
-    def check_fdc_parcels_with_invalid_parcel_type(self, db):
+    def check_fdc_parcel_with_invalid_parcel_type(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -397,7 +404,7 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420101)
 
-    def check_fdc_parcels_with_invalid_condition_type(self, db):
+    def check_fdc_parcel_with_invalid_condition_type(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -405,7 +412,7 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420201)
 
-    def check_fdc_parcels_with_invalid_land_caterogy(self, db):
+    def check_fdc_parcel_with_invalid_land_caterogy(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -413,7 +420,7 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420301)
 
-    def check_fdc_parcels_with_invalid_land_class(self, db):
+    def check_fdc_parcel_with_invalid_land_class(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -421,7 +428,7 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420401)
 
-    def check_fdc_parcels_with_invalid_economic_destination(self, db):
+    def check_fdc_parcel_with_invalid_economic_destination(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -429,7 +436,7 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420501)
 
-    def check_fdc_parcels_with_invalid_date_of_property_visit(self, db):
+    def check_fdc_parcel_with_invalid_date_of_property_visit(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -437,7 +444,7 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420601)
 
-    def check_fdc_parcels_with_invalid_visit_result(self, db):
+    def check_fdc_parcel_with_invalid_visit_result(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -445,7 +452,7 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420701)
 
-    def check_fdc_parcels_with_invalid_has_register_area(self, db):
+    def check_fdc_parcel_with_invalid_has_register_area(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
@@ -453,13 +460,69 @@ class LogicQualityRules:
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420801)
 
-    def check_fdc_parcels_with_invalid_has_fmi(self, db):
+    def check_fdc_parcel_with_invalid_has_fmi(self, db):
         rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_PARCEL_T,
                                                                                 db.names.FDC_PARCEL_T_HAS_FMI_F)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E420901)
+
+    def check_fdc_parcel_with_invalid_document_type_of_who_attended_the_visit(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_PARCEL_T,
+                                                                                db.names.FDC_PARCEL_T_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421001)
+
+    def check_fdc_parcel_with_invalid_document_number_of_who_attended_the_visit(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_PARCEL_T,
+                                                                                db.names.FDC_PARCEL_T_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421101)
+
+    def check_fdc_parcel_with_invalid_name_of_who_attended_the_visit(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_PARCEL_T,
+                                                                                db.names.FDC_PARCEL_T_NAME_WHO_ATTENDED_THE_VISIT_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421201)
+
+    def check_fdc_parcel_with_invalid_who_attend_the_visit_relation_with_the_property(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_PARCEL_T,
+                                                                                db.names.FDC_PARCEL_T_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421301)
+
+    def check_fdc_right_with_invalid_right_fraccion(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_RIGHT_T,
+                                                                                db.names.FDC_RIGHT_T_RIGHT_FRACTION_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421401)
+
+    def check_fdc_party_with_invalid_residence_department(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_PARTY_T,
+                                                                                db.names.FDC_PARTY_T_RESIDENCE_DEPARTMENT_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421501)
+
+    def check_fdc_party_with_invalid_residence_municipality(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_PARTY_T,
+                                                                                db.names.FDC_PARTY_T_RESIDENCE_MUNICIPALITY_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421601)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):

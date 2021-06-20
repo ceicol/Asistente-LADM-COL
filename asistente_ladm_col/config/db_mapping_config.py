@@ -7,6 +7,9 @@ from asistente_ladm_col.config.query_names import QueryNames
 
 
 
+
+
+
 DB_MAPPING_CONFIG = {
     LADMNames.LADM_COL_MODEL_KEY: {
         "LADM_COL.LADM_Nucleo.COL_EstadoDisponibilidadTipo": {QueryNames.VARIABLE_NAME: "COL_AVAILABILITY_TYPE_D", QueryNames.FIELDS_DICT: {}},
@@ -461,9 +464,20 @@ DB_MAPPING_CONFIG = {
         # Not there "Captura_Geo.Captura_Geo.DatosPHCondominio": {QueryNames.VARIABLE_NAME: "FDC_HP_CONDOMINIUM_T", QueryNames.FIELDS_DICT: {}},
         "Captura_Geo.Captura_Geo.Derecho": {QueryNames.VARIABLE_NAME: "FDC_RIGHT_T", QueryNames.FIELDS_DICT: {
             "Captura_Geo.Captura_Geo.predio_derecho.predio..Captura_Geo.Captura_Geo.Predio": "FDC_RIGHT_T_PARCEL_F",
-            "Captura_Geo.Captura_Geo.derecho_propietario.interesado..Captura_Geo.Captura_Geo.Interesado": "FDC_RIGHT_T_PARTY_F"
+            "Captura_Geo.Captura_Geo.derecho_propietario.interesado..Captura_Geo.Captura_Geo.Interesado": "FDC_RIGHT_T_PARTY_F",
+            "Captura_Geo.Captura_Geo.Derecho.Fecha_Inicio_Tenencia": "FDC_RIGHT_T_DATE_START_TENANCY_F",
+            "Captura_Geo.Captura_Geo.Derecho.Fraccion_Derecho": "FDC_RIGHT_T_RIGHT_FRACTION_F",
+            "Captura_Geo.Captura_Geo.Derecho.Origen_derecho": "FDC_RIGHT_T_RIGHT_ORIGIN_F",
+            "Captura_Geo.Captura_Geo.Derecho.Tipo": "FDC_RIGHT_T_TYPE_F"
         }},
-        "Captura_Geo.Captura_Geo.Fuente_Administrativa": {QueryNames.VARIABLE_NAME: "FDC_ADMINISTRATIVE_SOURCE_T", QueryNames.FIELDS_DICT: {}},
+        "Captura_Geo.Captura_Geo.Fuente_Administrativa": {QueryNames.VARIABLE_NAME: "FDC_ADMINISTRATIVE_SOURCE_T", QueryNames.FIELDS_DICT: {
+            # "Captura_Geo.Captura_Geo.Fuente_Administrativa.Ente_Emisor": "FDC_ADMINISTRATIVE_SOURCE_T_F",
+            # "Captura_Geo.Captura_Geo.Fuente_Administrativa.Ext_Archivo": "FDC_ADMINISTRATIVE_SOURCE_T_F",
+            # "Captura_Geo.Captura_Geo.Fuente_Administrativa.Fecha_Documento_Fuente": "FDC_ADMINISTRATIVE_SOURCE_T_F",
+            "Captura_Geo.Captura_Geo.Fuente_Administrativa.Numero_Fuente": "FDC_ADMINISTRATIVE_SOURCE_T_SOURCE_NUMBER_F",
+            # "Captura_Geo.Captura_Geo.Fuente_Administrativa.Observacion": "FDC_ADMINISTRATIVE_SOURCE_T_F",
+            # "Captura_Geo.Captura_Geo.Fuente_Administrativa.Tipo": "FDC_ADMINISTRATIVE_SOURCE_T_F"
+        }},
         "Captura_Geo.Captura_Geo.fuente_administrativa_derecho": {QueryNames.VARIABLE_NAME: "FDC_ADMINISTRATIVE_SOURCE_RIGHT_T", QueryNames.FIELDS_DICT: {
             "Captura_Geo.Captura_Geo.fuente_administrativa_derecho.derecho..Captura_Geo.Captura_Geo.Derecho": "FDC_ADMINISTRATIVE_SOURCE_RIGHT_T_RIGHT_F",
             "Captura_Geo.Captura_Geo.fuente_administrativa_derecho.fuente_administrativa..Captura_Geo.Captura_Geo.Fuente_Administrativa": "FDC_ADMINISTRATIVE_SOURCE_RIGHT_T_ADMINISTRATIVE_SOURCE_F"
@@ -473,7 +487,27 @@ DB_MAPPING_CONFIG = {
         #"Captura_Geo.Captura_Geo.derecho_propietario": {QueryNames.VARIABLE_NAME: "", QueryNames.FIELDS_DICT: {}},
         #"Captura_Geo.Captura_Geo.predio_construccion": {QueryNames.VARIABLE_NAME: "", QueryNames.FIELDS_DICT: {}},
         #"Captura_Geo.Captura_Geo.predio_derecho": {QueryNames.VARIABLE_NAME: "", QueryNames.FIELDS_DICT: {}},
-        "Captura_Geo.Captura_Geo.Interesado": {QueryNames.VARIABLE_NAME: "FDC_PARTY_T", QueryNames.FIELDS_DICT: {}},
+        "Captura_Geo.Captura_Geo.Interesado": {QueryNames.VARIABLE_NAME: "FDC_PARTY_T", QueryNames.FIELDS_DICT: {
+            # "Captura_Geo.Captura_Geo.Interesado.Adjunto": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Adjunto_2": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Autoriza_Notificacion_Correo": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Correo_Electronico": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Cuota_Participacion": "FDC_PARTY_T_F",
+            "Captura_Geo.Captura_Geo.Interesado.Departamento": "FDC_PARTY_T_RESIDENCE_DEPARTMENT_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Direccion_Residencia": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Documento_Identidad": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Grupo_Etnico": "FDC_PARTY_T_F",
+            "Captura_Geo.Captura_Geo.Interesado.Municipio": "FDC_PARTY_T_RESIDENCE_MUNICIPALITY_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Primer_Apellido": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Primer_Nombre": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Razon_Social": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Segundo_Apellido": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Segundo_Nombre": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Sexo": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Telefono1": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Tipo": "FDC_PARTY_T_F",
+            # "Captura_Geo.Captura_Geo.Interesado.Tipo_Documento": "FDC_PARTY_T_F"
+        }},
         # Not there "Captura_Geo.Captura_Geo.InteresadoContacto": {QueryNames.VARIABLE_NAME: "FDC_PARTY_CONTACT_T", QueryNames.FIELDS_DICT: {}},
         #"Captura_Geo.Captura_Geo.propietario_Contacto": {QueryNames.VARIABLE_NAME: "", QueryNames.FIELDS_DICT: {}},
         #"Captura_Geo.Captura_Geo.propietario_propietario_contacto": {QueryNames.VARIABLE_NAME: "", QueryNames.FIELDS_DICT: {}},
@@ -508,18 +542,18 @@ DB_MAPPING_CONFIG = {
             "Captura_Geo.Captura_Geo.Predio.Fecha_Visita_predial": "FDC_PARCEL_T_DATE_OF_PROPERTY_VISIT_F",
             # "Captura_Geo.Captura_Geo.Predio.Id_Operacion": "FDC_PARCEL_T_F",
             # "Captura_Geo.Captura_Geo.Predio.Matricula_Inmobiliaria": "FDC_PARCEL_T_F",
-            # "Captura_Geo.Captura_Geo.Predio.Nombre_Quien_Atendio": "FDC_PARCEL_T_F",
-            # "Captura_Geo.Captura_Geo.Predio.Numero_Documento_Quien_Atendio": "FDC_PARCEL_T_F",
+            "Captura_Geo.Captura_Geo.Predio.Nombre_Quien_Atendio": "FDC_PARCEL_T_NAME_WHO_ATTENDED_THE_VISIT_F",
+            "Captura_Geo.Captura_Geo.Predio.Numero_Documento_Quien_Atendio": "FDC_PARCEL_T_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_F",
             # "Captura_Geo.Captura_Geo.Predio.Numero_Predial_Anterior": "FDC_PARCEL_T_F",
             # "Captura_Geo.Captura_Geo.Predio.Numero_Torres": "FDC_PARCEL_T_F",
             # "Captura_Geo.Captura_Geo.Predio.NUPRE": "FDC_PARCEL_T_F",
             # "Captura_Geo.Captura_Geo.Predio.Observaciones": "FDC_PARCEL_T_F",
-            # "Captura_Geo.Captura_Geo.Predio.Relacion_Con_Predio": "FDC_PARCEL_T_F",
+            "Captura_Geo.Captura_Geo.Predio.Relacion_Con_Predio": "FDC_PARCEL_T_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_F",
             "Captura_Geo.Captura_Geo.Predio.Resultado_Visita": "FDC_PARCEL_T_VISIT_RESULT_F",
             # "Captura_Geo.Captura_Geo.Predio.Suscribe_Acta_Colindancia": "FDC_PARCEL_T_F",
             "Captura_Geo.Captura_Geo.Predio.Tiene_Area_Registral": "FDC_PARCEL_T_HAS_REGISTRER_AREA_F",
             "Captura_Geo.Captura_Geo.Predio.Tiene_FMI": "FDC_PARCEL_T_HAS_FMI_F",
-            # "Captura_Geo.Captura_Geo.Predio.Tipo_Documento_Quien_Atendio": "FDC_PARCEL_T_F",
+            "Captura_Geo.Captura_Geo.Predio.Tipo_Documento_Quien_Atendio": "FDC_PARCEL_T_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_F",
             # "Captura_Geo.Captura_Geo.Predio.Total_Unidades_Privadas": "FDC_PARCEL_T_F",
             # "Captura_Geo.Captura_Geo.Predio.Validacion_Condicion_Predio": "FDC_PARCEL_T_F",
             # "Captura_Geo.Captura_Geo.Predio.Validacion_Datos_Catastrales": "FDC_PARCEL_T_F",

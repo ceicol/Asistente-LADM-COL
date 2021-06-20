@@ -366,7 +366,14 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL,
-                EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL
+                EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL,
+                EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL
             ],
             ROLE_GUI_CONFIG: field_admin_role_gui
         },
@@ -393,7 +400,14 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL,
-                EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL
+                EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL,
+                EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL,
+                EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL
             ],
             ROLE_GUI_CONFIG: field_coordinator_role_gui
         },
