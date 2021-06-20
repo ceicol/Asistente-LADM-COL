@@ -97,7 +97,14 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E420601,
                                                             QUALITY_RULE_ERROR_CODE_E420701,
                                                             QUALITY_RULE_ERROR_CODE_E420801,
-                                                            QUALITY_RULE_ERROR_CODE_E420901)
+                                                            QUALITY_RULE_ERROR_CODE_E420901,
+                                                            QUALITY_RULE_ERROR_CODE_E421001,
+                                                            QUALITY_RULE_ERROR_CODE_E421101,
+                                                            QUALITY_RULE_ERROR_CODE_E421201,
+                                                            QUALITY_RULE_ERROR_CODE_E421301,
+                                                            QUALITY_RULE_ERROR_CODE_E421401,
+                                                            QUALITY_RULE_ERROR_CODE_E421501,
+                                                            QUALITY_RULE_ERROR_CODE_E421601)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -220,6 +227,13 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel visit result should not be null"),
             EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel has register area should not be null"),
             EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel has fmi should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel document type of who attended the visit should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel document number of who attended the visit should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel name of who attended the visit should not be null"),
+            EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel who attended the visit related to the property should not be null"),
+            EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC right fraccion should not be null"),
+            EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC party department of residence should not be null"),
+            EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC party municipality of residence should not be null"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -326,6 +340,13 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E420701: QCoreApplication.translate("TranslatableConfigStrings", "El resultado de la visita del predio no puede ser null"),
             QUALITY_RULE_ERROR_CODE_E420801: QCoreApplication.translate("TranslatableConfigStrings", "El atributo tiene área registral del  predio no puede ser null"),
             QUALITY_RULE_ERROR_CODE_E420901: QCoreApplication.translate("TranslatableConfigStrings", "El atributo tiene folio de matrícula del predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E421001: QCoreApplication.translate("TranslatableConfigStrings", "El atributo tipo de documento de quien atendio la visita no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E421101: QCoreApplication.translate("TranslatableConfigStrings", "El atributo número de documento de quien atendio la visita no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E421201: QCoreApplication.translate("TranslatableConfigStrings", "El atributo nombre de quien atendio la visita no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E421301: QCoreApplication.translate("TranslatableConfigStrings", "El atributo relación con el predio no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E421401: QCoreApplication.translate("TranslatableConfigStrings", "El atributo fracción del derecho no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E421501: QCoreApplication.translate("TranslatableConfigStrings", "El atributo departamento de residencia del interesado no puede ser null"),
+            QUALITY_RULE_ERROR_CODE_E421601: QCoreApplication.translate("TranslatableConfigStrings", "El atributo municipio de residencia del interesado no puede ser null"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")

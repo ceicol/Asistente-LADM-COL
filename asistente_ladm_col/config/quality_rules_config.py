@@ -127,6 +127,13 @@ QUALITY_RULE_ERROR_CODE_E420601 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E420701 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_VISIT_RESULT_IS_NULL.value) + '01'
 QUALITY_RULE_ERROR_CODE_E420801 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_HAS_REGISTRER_AREA_IS_NULL.value) + '01'
 QUALITY_RULE_ERROR_CODE_E420901 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_HAS_FMI_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421301 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421401 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421501 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421601 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -796,6 +803,83 @@ class QualityRuleConfig:
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E420901
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_TYPE_OF_WHO_ATTENDED_THE_VISIT_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_tipo_documento_quien_atendio_la_visita_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E421001
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_DOCUMENT_NUMBER_OF_WHO_ATTENDED_THE_VISIT_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_numero_documento_quien_atendio_la_visita_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E421101
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_NAME_WHO_ATTENDED_THE_VISIT_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_nombre_quien_atendio_la_visita_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E421201
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_relacion_con_el_predio_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E421301
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_derecho_fraccion_del_derecho_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E421401
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_departamento_residencia_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E421501
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_municipio_residencia_es_null"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E421601
                         ]
                     }
                 }
