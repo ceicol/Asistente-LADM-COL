@@ -75,7 +75,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E421301,
                                                             QUALITY_RULE_ERROR_CODE_E421401,
                                                             QUALITY_RULE_ERROR_CODE_E421501,
-                                                            QUALITY_RULE_ERROR_CODE_E421601)
+                                                            QUALITY_RULE_ERROR_CODE_E421601,
+                                                            QUALITY_RULE_ERROR_CODE_E421701)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -501,7 +502,7 @@ class LogicQualityRules:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421301)
 
     def check_fdc_right_with_invalid_right_fraccion(self, db):
-        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL)
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_FRACTION_IS_NULL)
         res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
                                                                                 db.names.FDC_RIGHT_T,
                                                                                 db.names.FDC_RIGHT_T_RIGHT_FRACTION_F)
@@ -523,6 +524,12 @@ class LogicQualityRules:
                                                                                 db.names.FDC_PARTY_T_RESIDENCE_MUNICIPALITY_F)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421601)
+
+    def check_fdc_right_with_invalid_right_type(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE)
+        res, records = self.get_ladm_queries(db.engine).get_right_with_invalid_right_type(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421701)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):

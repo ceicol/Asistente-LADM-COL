@@ -178,12 +178,14 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_name_of_who_attended_the_visit(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_WHO_ATTENDED_THE_VISIT_RELATION_WITH_THE_PROPERTY_IS_NULL:
             msg, level = self.logic_quality_rules.check_fdc_parcel_with_invalid_who_attend_the_visit_relation_with_the_property(db)
-        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_RIGHT_FRACTION_IS_NULL:
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_FRACTION_IS_NULL:
             msg, level = self.logic_quality_rules.check_fdc_right_with_invalid_right_fraccion(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL:
             msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_residence_department(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL:
             msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_residence_municipality(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE:
+            msg, level = self.logic_quality_rules.check_fdc_right_with_invalid_right_type(db)
 
         return msg, level
 

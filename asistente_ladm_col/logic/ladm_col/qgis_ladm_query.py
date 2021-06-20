@@ -443,5 +443,9 @@ class QGISLADMQuery:
         raise NotImplementedError
 
     @staticmethod
-    def get_invalid_null_values(db):
+    def get_invalid_null_values(db, table, field):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_right_with_invalid_right_type(db):
         raise NotImplementedError
