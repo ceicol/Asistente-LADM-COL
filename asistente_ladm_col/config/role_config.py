@@ -374,7 +374,8 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_RIGHT_FRACTION_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL,
-                EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE
+                EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE,
+                EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY
             ],
             ROLE_GUI_CONFIG: field_admin_role_gui
         },
@@ -409,7 +410,8 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_RIGHT_FRACTION_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL,
-                EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE
+                EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE,
+                EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY
             ],
             ROLE_GUI_CONFIG: field_coordinator_role_gui
         },

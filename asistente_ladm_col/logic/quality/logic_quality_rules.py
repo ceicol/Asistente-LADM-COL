@@ -76,7 +76,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E421401,
                                                             QUALITY_RULE_ERROR_CODE_E421501,
                                                             QUALITY_RULE_ERROR_CODE_E421601,
-                                                            QUALITY_RULE_ERROR_CODE_E421701)
+                                                            QUALITY_RULE_ERROR_CODE_E421701,
+                                                            QUALITY_RULE_ERROR_CODE_E421801)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -530,6 +531,14 @@ class LogicQualityRules:
         res, records = self.get_ladm_queries(db.engine).get_right_with_invalid_right_type(db)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421701)
+
+    def check_fdc_building_unit_without_qualification_by_typology(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY)
+        res, records = self.get_ladm_queries(db.engine).get_invalid_null_values(db,
+                                                                                db.names.FDC_BUILDING_UNIT_T,
+                                                                                db.names.FDC_BUILDING_UNIT_T_TYPOLOGY_TYPE_F)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421801)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):
