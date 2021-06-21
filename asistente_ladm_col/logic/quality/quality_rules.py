@@ -186,6 +186,8 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_residence_municipality(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE:
             msg, level = self.logic_quality_rules.check_fdc_right_with_invalid_right_type(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY:
+            msg, level = self.logic_quality_rules.check_fdc_building_unit_without_qualification_by_typology(db)
 
         return msg, level
 
