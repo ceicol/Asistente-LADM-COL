@@ -506,7 +506,7 @@ DB_MAPPING_CONFIG = {
             # "Captura_Geo.Captura_Geo.Interesado.Sexo": "FDC_PARTY_T_F",
             # "Captura_Geo.Captura_Geo.Interesado.Telefono1": "FDC_PARTY_T_F",
             # "Captura_Geo.Captura_Geo.Interesado.Tipo": "FDC_PARTY_T_F",
-            # "Captura_Geo.Captura_Geo.Interesado.Tipo_Documento": "FDC_PARTY_T_F"
+            "Captura_Geo.Captura_Geo.Interesado.Tipo_Documento": "FDC_PARTY_T_DOCUMENT_TYPE_F"
         }},
         # Not there "Captura_Geo.Captura_Geo.InteresadoContacto": {QueryNames.VARIABLE_NAME: "FDC_PARTY_CONTACT_T", QueryNames.FIELDS_DICT: {}},
         #"Captura_Geo.Captura_Geo.propietario_Contacto": {QueryNames.VARIABLE_NAME: "", QueryNames.FIELDS_DICT: {}},

@@ -134,9 +134,10 @@ QUALITY_RULE_ERROR_CODE_E421301 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E421401 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_FRACTION_IS_NULL.value) + '01'
 QUALITY_RULE_ERROR_CODE_E421501 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL.value) + '01'
 QUALITY_RULE_ERROR_CODE_E421601 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL.value) + '01'
-QUALITY_RULE_ERROR_CODE_E421701 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE.value) + '01'
+QUALITY_RULE_ERROR_CODE_E421701 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_WITH_INVALID_RIGHT_TYPE.value) + '01'
 QUALITY_RULE_ERROR_CODE_E421801 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY.value) + '01'
 QUALITY_RULE_ERROR_CODE_E421901 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -885,9 +886,9 @@ class QualityRuleConfig:
                             QUALITY_RULE_ERROR_CODE_E421601
                         ]
                     },
-                    EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE: {
-                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE,
-                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE],
+                    EnumQualityRule.Logic.FDC_RIGHT_WITH_INVALID_RIGHT_TYPE: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_RIGHT_WITH_INVALID_RIGHT_TYPE,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RIGHT_WITH_INVALID_RIGHT_TYPE],
                         QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_derecho_tipo_de_derecho_es_invalido"),
                         QUALITY_RULE_TABLE_FIELDS: [
                             QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
@@ -916,6 +917,17 @@ class QualityRuleConfig:
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E421901
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_tipo_de_documento_es_invalido"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422001
                         ]
                     }
                 }
