@@ -78,7 +78,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E421601,
                                                             QUALITY_RULE_ERROR_CODE_E421701,
                                                             QUALITY_RULE_ERROR_CODE_E421801,
-                                                            QUALITY_RULE_ERROR_CODE_E421901)
+                                                            QUALITY_RULE_ERROR_CODE_E421901,
+                                                            QUALITY_RULE_ERROR_CODE_E422001)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -528,7 +529,7 @@ class LogicQualityRules:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421601)
 
     def check_fdc_right_with_invalid_right_type(self, db):
-        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE)
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_WITH_INVALID_RIGHT_TYPE)
         res, records = self.get_ladm_queries(db.engine).get_right_with_invalid_right_type(db)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421701)
@@ -546,6 +547,12 @@ class LogicQualityRules:
         res, records = self.get_ladm_queries(db.engine).get_parcel_without_associated_address(db)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421901)
+
+    def check_fdc_party_with_invalid_document_type(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE)
+        res, records = self.get_ladm_queries(db.engine).get_party_with_invalid_document_type(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422001)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):

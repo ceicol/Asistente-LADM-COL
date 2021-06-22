@@ -288,14 +288,15 @@ class MSSQLLADMQuery(QGISLADMQuery):
     def get_right_with_invalid_right_type(db):
         query = """SELECT {t_id}, {t_ili_tid}
                    FROM {schema}.{fdc_right_t}
-                   WHERE {fdc_right_t_type_f}  = (select {t_id} from {schema}.{fdc_right_t_type_d} where {ilicode} = 'Sin_Derecho')
+                   WHERE {fdc_right_t_type_f}  = (select {t_id} from {schema}.{fdc_right_t_type_d} where {ilicode} = '{fdc_right_type_without_right}')
                  """.format(t_id=db.names.T_ID_F,
                             t_ili_tid=db.names.T_ILI_TID_F,
                             ilicode=db.names.ILICODE_F,
                             schema=db.schema,
                             fdc_right_t=db.names.FDC_RIGHT_T,
                             fdc_right_t_type_f=db.names.FDC_RIGHT_T_TYPE_F,
-                            fdc_right_t_type_d=db.names.FDC_RIGHT_TYPE_D)
+                            fdc_right_t_type_d=db.names.FDC_RIGHT_TYPE_D,
+                            fdc_right_type_without_right=LADMNames.FDC_RIGHT_TYPE_WITHOUT_RIGHT)
         return db.execute_sql_query(query)
 
     @staticmethod
@@ -313,4 +314,19 @@ class MSSQLLADMQuery(QGISLADMQuery):
                             schema=db.schema,
                             ext_address_s=db.names.EXT_ADDRESS_S,
                             fdc_parcel_t=db.names.FDC_PARCEL_T)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_party_with_invalid_document_type(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                   FROM {schema}.{fdc_party_t}
+                   WHERE {fdc_party_t_document_type_f} = (select {t_id} from {schema}.{fdc_party_document_type_d} where {ilicode} = '{fdc_party_document_type_sequential}')
+                 """.format(t_id=db.names.T_ID_F,
+                            t_ili_tid=db.names.T_ILI_TID_F,
+                            ilicode=db.names.ILICODE_F,
+                            schema=db.schema,
+                            fdc_party_t=db.names.FDC_PARTY_T,
+                            fdc_party_t_document_type_f=db.names.FDC_PARTY_T_DOCUMENT_TYPE_F,
+                            fdc_party_document_type_d=db.names.FDC_PARTY_DOCUMENT_TYPE_D,
+                            fdc_party_document_type_sequential=LADMNames.FDC_PARTY_DOCUMENT_TYPE_SEQUENTIAL)
         return db.execute_sql_query(query)

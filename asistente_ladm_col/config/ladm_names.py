@@ -45,6 +45,9 @@ class LADMNames(metaclass=Singleton):
     PARCEL_TYPE_ROAD = "Via"
     PARCEL_TYPE_PUBLIC_USE = "Bien_Uso_Publico"
 
+    FDC_RIGHT_TYPE_WITHOUT_RIGHT = 'Sin_Derecho'
+    FDC_PARTY_DOCUMENT_TYPE_SEQUENTIAL = 'Secuencial'
+
     """
     LADM PACKAGES
     """

@@ -184,12 +184,14 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_residence_department(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL:
             msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_residence_municipality(db)
-        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE:
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_WITH_INVALID_RIGHT_TYPE:
             msg, level = self.logic_quality_rules.check_fdc_right_with_invalid_right_type(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY:
             msg, level = self.logic_quality_rules.check_fdc_building_unit_without_qualification_by_typology(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS:
             msg, level = self.logic_quality_rules.check_fdc_parcel_without_associated_address(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE:
+            msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_document_type(db)
 
         return msg, level
 
