@@ -138,6 +138,7 @@ QUALITY_RULE_ERROR_CODE_E421701 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E421801 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY.value) + '01'
 QUALITY_RULE_ERROR_CODE_E421901 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS.value) + '01'
 QUALITY_RULE_ERROR_CODE_E422001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -928,6 +929,17 @@ class QualityRuleConfig:
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E422001
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_sin_derecho_asociado"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422101
                         ]
                     }
                 }

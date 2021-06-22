@@ -443,3 +443,19 @@ class PGLADMQuery(QGISLADMQuery):
                             fdc_party_document_type_d=db.names.FDC_PARTY_DOCUMENT_TYPE_D,
                             fdc_party_document_type_sequential=LADMNames.FDC_PARTY_DOCUMENT_TYPE_SEQUENTIAL)
         return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_parcel_without_associated_right(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                   FROM {schema}.{fdc_parcel_t}
+                   WHERE {t_id} NOT IN (
+                        SELECT DISTINCT {fdc_right_t_parcel_f}
+                        FROM {schema}.{fdc_right_t} WHERE {fdc_right_t_parcel_f} IS NOT NULL)
+                 """.format(t_id=db.names.T_ID_F,
+                            t_ili_tid=db.names.T_ILI_TID_F,
+                            ilicode=db.names.ILICODE_F,
+                            schema=db.schema,
+                            fdc_parcel_t=db.names.FDC_PARCEL_T,
+                            fdc_right_t=db.names.FDC_RIGHT_T,
+                            fdc_right_t_parcel_f=db.names.FDC_RIGHT_T_PARCEL_F)
+        return db.execute_sql_query(query)

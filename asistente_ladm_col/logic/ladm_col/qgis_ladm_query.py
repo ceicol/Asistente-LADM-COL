@@ -457,3 +457,7 @@ class QGISLADMQuery:
     @staticmethod
     def get_party_with_invalid_document_type(db):
         raise NotImplementedError
+
+    @staticmethod
+    def get_parcel_without_associated_right(db):
+        raise NotImplementedError
