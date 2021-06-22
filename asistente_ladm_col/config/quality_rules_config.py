@@ -858,7 +858,7 @@ class QualityRuleConfig:
                         QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RIGHT_FRACTION_IS_NULL],
                         QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_derecho_fraccion_del_derecho_es_null"),
                         QUALITY_RULE_TABLE_FIELDS: [
-                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_derecho"), QVariant.String)
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E421401
@@ -869,7 +869,7 @@ class QualityRuleConfig:
                         QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_DEPARTMENT_IS_NULL],
                         QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_departamento_residencia_es_null"),
                         QUALITY_RULE_TABLE_FIELDS: [
-                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_interesado"), QVariant.String)
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E421501
@@ -880,7 +880,7 @@ class QualityRuleConfig:
                         QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL],
                         QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_municipio_residencia_es_null"),
                         QUALITY_RULE_TABLE_FIELDS: [
-                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_interesado"), QVariant.String)
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E421601
@@ -891,7 +891,7 @@ class QualityRuleConfig:
                         QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RIGHT_WITH_INVALID_RIGHT_TYPE],
                         QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_derecho_tipo_de_derecho_es_invalido"),
                         QUALITY_RULE_TABLE_FIELDS: [
-                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_derecho"), QVariant.String)
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E421701
@@ -902,7 +902,7 @@ class QualityRuleConfig:
                         QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY],
                         QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_unidad_construccion_sin_calificacion_por_tipologia"),
                         QUALITY_RULE_TABLE_FIELDS: [
-                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_unidad_construccion"), QVariant.String)
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E421801
@@ -924,7 +924,7 @@ class QualityRuleConfig:
                         QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE],
                         QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_tipo_de_documento_es_invalido"),
                         QUALITY_RULE_TABLE_FIELDS: [
-                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_interesado"), QVariant.String)
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E422001
