@@ -355,10 +355,10 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E421401: QCoreApplication.translate("TranslatableConfigStrings", "El atributo fracción del derecho no puede ser null"),
             QUALITY_RULE_ERROR_CODE_E421501: QCoreApplication.translate("TranslatableConfigStrings", "El atributo departamento de residencia del interesado no puede ser null"),
             QUALITY_RULE_ERROR_CODE_E421601: QCoreApplication.translate("TranslatableConfigStrings", "El atributo municipio de residencia del interesado no puede ser null"),
-            QUALITY_RULE_ERROR_CODE_E421701: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de derecho no puede ser Sin_Derecho"),
+            QUALITY_RULE_ERROR_CODE_E421701: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de derecho no puede ser 'Sin_Derecho'"),
             QUALITY_RULE_ERROR_CODE_E421801: QCoreApplication.translate("TranslatableConfigStrings", "La unidad de construcción no tiene calificación por tipología"),
             QUALITY_RULE_ERROR_CODE_E421901: QCoreApplication.translate("TranslatableConfigStrings", "El predio no tiene asociada una dirección"),
-            QUALITY_RULE_ERROR_CODE_E422001: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de documento no debería ser secuencial"),
+            QUALITY_RULE_ERROR_CODE_E422001: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de documento no debería ser 'Secuencial'"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")
