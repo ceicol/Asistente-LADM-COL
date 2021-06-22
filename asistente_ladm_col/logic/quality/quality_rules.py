@@ -188,6 +188,8 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_right_with_invalid_right_type(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY:
             msg, level = self.logic_quality_rules.check_fdc_building_unit_without_qualification_by_typology(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS:
+            msg, level = self.logic_quality_rules.check_fdc_parcel_without_associated_address(db)
 
         return msg, level
 

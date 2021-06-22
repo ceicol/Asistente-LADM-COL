@@ -106,7 +106,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E421501,
                                                             QUALITY_RULE_ERROR_CODE_E421601,
                                                             QUALITY_RULE_ERROR_CODE_E421701,
-                                                            QUALITY_RULE_ERROR_CODE_E421801)
+                                                            QUALITY_RULE_ERROR_CODE_E421801,
+                                                            QUALITY_RULE_ERROR_CODE_E421901)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -238,6 +239,7 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.FDC_PARTY_RESIDENCE_MUNICIPALITY_IS_NULL: QCoreApplication.translate("TranslatableConfigStrings", "FDC party municipality of residence should not be null"),
             EnumQualityRule.Logic.FDC_RIGHT_TYPE_WITH_INVALID_DOMAIN_VALUE: QCoreApplication.translate("TranslatableConfigStrings", "FDC right type with a invalid domain value"),
             EnumQualityRule.Logic.FDC_BUILDING_UNIT_WITHOUT_QUALIFICATION_BY_TYPOLOGY: QCoreApplication.translate("TranslatableConfigStrings", "FDC building unit without qualification by typology"),
+            EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel without associated address"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -353,6 +355,7 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E421601: QCoreApplication.translate("TranslatableConfigStrings", "El atributo municipio de residencia del interesado no puede ser null"),
             QUALITY_RULE_ERROR_CODE_E421701: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de derecho no puede ser Sin_Derecho"),
             QUALITY_RULE_ERROR_CODE_E421801: QCoreApplication.translate("TranslatableConfigStrings", "La unidad de construcción no tiene calificación por tipología"),
+            QUALITY_RULE_ERROR_CODE_E421901: QCoreApplication.translate("TranslatableConfigStrings", "El predio no tiene asociada una dirección"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")
