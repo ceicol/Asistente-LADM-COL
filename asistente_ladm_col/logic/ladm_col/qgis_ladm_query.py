@@ -449,3 +449,7 @@ class QGISLADMQuery:
     @staticmethod
     def get_right_with_invalid_right_type(db):
         raise NotImplementedError
+
+    @staticmethod
+    def get_parcel_without_associated_address(db):
+        raise NotImplementedError

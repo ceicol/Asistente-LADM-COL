@@ -77,7 +77,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E421501,
                                                             QUALITY_RULE_ERROR_CODE_E421601,
                                                             QUALITY_RULE_ERROR_CODE_E421701,
-                                                            QUALITY_RULE_ERROR_CODE_E421801)
+                                                            QUALITY_RULE_ERROR_CODE_E421801,
+                                                            QUALITY_RULE_ERROR_CODE_E421901)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -539,6 +540,12 @@ class LogicQualityRules:
                                                                                 db.names.FDC_BUILDING_UNIT_T_TYPOLOGY_TYPE_F)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421801)
+
+    def check_fdc_parcel_without_associated_address(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS)
+        res, records = self.get_ladm_queries(db.engine).get_parcel_without_associated_address(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E421901)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):
