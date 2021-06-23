@@ -194,6 +194,8 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_document_type(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT:
             msg, level = self.logic_quality_rules.check_fdc_parcel_without_associated_right(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE:
+            msg, level = self.logic_quality_rules.check_fdc_right_without_associated_administrative_source(db)
 
         return msg, level
 

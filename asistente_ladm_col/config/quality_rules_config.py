@@ -139,6 +139,7 @@ QUALITY_RULE_ERROR_CODE_E421801 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E421901 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS.value) + '01'
 QUALITY_RULE_ERROR_CODE_E422001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE.value) + '01'
 QUALITY_RULE_ERROR_CODE_E422101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -940,6 +941,17 @@ class QualityRuleConfig:
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E422101
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_derecho_sin_fuente_administrativa_asociada"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_derecho"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422201
                         ]
                     }
                 }

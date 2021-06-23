@@ -80,7 +80,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E421801,
                                                             QUALITY_RULE_ERROR_CODE_E421901,
                                                             QUALITY_RULE_ERROR_CODE_E422001,
-                                                            QUALITY_RULE_ERROR_CODE_E422101)
+                                                            QUALITY_RULE_ERROR_CODE_E422101,
+                                                            QUALITY_RULE_ERROR_CODE_E422201)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -560,6 +561,12 @@ class LogicQualityRules:
         res, records = self.get_ladm_queries(db.engine).get_parcel_without_associated_right(db)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422101)
+
+    def check_fdc_right_without_associated_administrative_source(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE)
+        res, records = self.get_ladm_queries(db.engine).get_right_without_associated_administrative_source(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422201)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):

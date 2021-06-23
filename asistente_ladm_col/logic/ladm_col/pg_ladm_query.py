@@ -459,3 +459,19 @@ class PGLADMQuery(QGISLADMQuery):
                             fdc_right_t=db.names.FDC_RIGHT_T,
                             fdc_right_t_parcel_f=db.names.FDC_RIGHT_T_PARCEL_F)
         return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_right_without_associated_administrative_source(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                   FROM {schema}.{fdc_right_t}
+                   WHERE {t_id} NOT IN (
+                        SELECT DISTINCT {fdc_administrative_source_right_t_right_f}
+                        FROM {schema}.{fdc_administrative_source_right_t} WHERE {fdc_administrative_source_right_t_right_f} IS NOT NULL)
+                 """.format(t_id=db.names.T_ID_F,
+                            t_ili_tid=db.names.T_ILI_TID_F,
+                            ilicode=db.names.ILICODE_F,
+                            schema=db.schema,
+                            fdc_right_t=db.names.FDC_RIGHT_T,
+                            fdc_administrative_source_right_t=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T,
+                            fdc_administrative_source_right_t_right_f=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T_RIGHT_F)
+        return db.execute_sql_query(query)

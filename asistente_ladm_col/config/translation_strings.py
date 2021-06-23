@@ -109,7 +109,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E421801,
                                                             QUALITY_RULE_ERROR_CODE_E421901,
                                                             QUALITY_RULE_ERROR_CODE_E422001,
-                                                            QUALITY_RULE_ERROR_CODE_E422101)
+                                                            QUALITY_RULE_ERROR_CODE_E422101,
+                                                            QUALITY_RULE_ERROR_CODE_E422201)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -244,6 +245,7 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_ADDRESS: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel without associated address"),
             EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE: QCoreApplication.translate("TranslatableConfigStrings", "FDC party with invalid a invalid document type"),
             EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel without associated right"),
+            EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE: QCoreApplication.translate("TranslatableConfigStrings", "FDC right without associated administrative source"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -362,6 +364,7 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E421901: QCoreApplication.translate("TranslatableConfigStrings", "El predio no tiene asociada una dirección"),
             QUALITY_RULE_ERROR_CODE_E422001: QCoreApplication.translate("TranslatableConfigStrings", "El tipo de documento no debería ser 'Secuencial'"),
             QUALITY_RULE_ERROR_CODE_E422101: QCoreApplication.translate("TranslatableConfigStrings", "El predio no tiene asociado un derecho"),
+            QUALITY_RULE_ERROR_CODE_E422201: QCoreApplication.translate("TranslatableConfigStrings", "El derecho no tiene asociado una fuente administrativa"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")
