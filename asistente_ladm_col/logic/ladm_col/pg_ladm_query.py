@@ -475,3 +475,21 @@ class PGLADMQuery(QGISLADMQuery):
                             fdc_administrative_source_right_t=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T,
                             fdc_administrative_source_right_t_right_f=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T_RIGHT_F)
         return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_parcel_without_associated_plot(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                   FROM {schema}.{fdc_parcel_t}
+                   WHERE {fdc_parcel_t_condition_f} != (SELECT {t_id} FROM {schema}.{fdc_condition_parcel_type_d} WHERE {ilicode} LIKE '{parcel_type_horizontal_property_parcel_unit}')
+                   AND {t_id} NOT IN (SELECT DISTINCT {fdc_plot_t_parcel_f} FROM {schema}.{fdc_plot_t} WHERE {fdc_plot_t_parcel_f} IS NOT NULL)
+                 """.format(t_id=db.names.T_ID_F,
+                            t_ili_tid=db.names.T_ILI_TID_F,
+                            ilicode=db.names.ILICODE_F,
+                            schema=db.schema,
+                            fdc_parcel_t=db.names.FDC_PARCEL_T,
+                            fdc_parcel_t_condition_f=db.names.FDC_PARCEL_T_CONDITION_F,
+                            fdc_condition_parcel_type_d=db.names.FDC_CONDITION_PARCEL_TYPE_D,
+                            parcel_type_horizontal_property_parcel_unit=LADMNames.PARCEL_TYPE_HORIZONTAL_PROPERTY_PARCEL_UNIT,
+                            fdc_plot_t=db.names.FDC_PLOT_T,
+                            fdc_plot_t_parcel_f=db.names.FDC_PLOT_T_PARCEL_F)
+        return db.execute_sql_query(query)

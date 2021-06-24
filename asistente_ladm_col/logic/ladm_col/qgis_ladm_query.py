@@ -465,3 +465,7 @@ class QGISLADMQuery:
     @staticmethod
     def get_right_without_associated_administrative_source(db):
         raise NotImplementedError
+
+    @staticmethod
+    def get_parcel_without_associated_plot(db):
+        raise NotImplementedError
