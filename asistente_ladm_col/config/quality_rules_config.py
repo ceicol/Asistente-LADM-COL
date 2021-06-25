@@ -142,6 +142,15 @@ QUALITY_RULE_ERROR_CODE_E422101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E422201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE.value) + '01'
 QUALITY_RULE_ERROR_CODE_E422301 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT.value) + '01'
 QUALITY_RULE_ERROR_CODE_E422401 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422501 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422601 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422701 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422801 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422901 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E423001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E423101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E423201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL.value) + '01'
+QUALITY_RULE_ERROR_CODE_E423301 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -976,6 +985,105 @@ class QualityRuleConfig:
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E422401
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_derecho_con_relacion_rota_fdc_predio"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_derecho"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422501
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_con_relacion_rota_fdc_derecho"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_interesado"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422601
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_fuente_administrativa_derecho_con_relacion_rota_fdc_derecho"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_fuente_administrativa_derecho"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422701
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_fuente_administrativa_con_relacion_rota_fdc_derecho"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_fuente_administrativa"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422801
+                        ]
+                    },
+                    EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "ext_direccion_con_relacion_rota_fdc_predio"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_direccion"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422901
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_ofertasmercadoinmobiliario_con_relacion_rota_fdc_predio"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_ofertasmercadoinmobiliario"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E423001
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_restriccion_con_relacion_rota_fdc_predio"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_restriccion"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E423101
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_construccion_con_relacion_rota_fdc_predio"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_construccion"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E423201
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_unidad_construccion_con_relacion_rota_fdc_construccion"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_unidad_construccion"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E423301
                         ]
                     }
                 }

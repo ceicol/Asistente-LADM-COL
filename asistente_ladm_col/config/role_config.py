@@ -381,7 +381,16 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT,
                 EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE,
                 EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT,
-                EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT
+                EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT,
+                EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT,
+                EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT,
+                EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT,
+                EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING
             ],
             ROLE_GUI_CONFIG: field_admin_role_gui
         },
@@ -423,7 +432,16 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT,
                 EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE,
                 EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT,
-                EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT
+                EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT,
+                EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT,
+                EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT,
+                EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT,
+                EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL,
+                EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING
             ],
             ROLE_GUI_CONFIG: field_coordinator_role_gui
         },

@@ -568,7 +568,9 @@ DB_MAPPING_CONFIG = {
         "Captura_Geo.Captura_Geo.Punto_levantamiento": {QueryNames.VARIABLE_NAME: "FDC_SURVEY_POINT_T",QueryNames.FIELDS_DICT: {}},
         "Captura_Geo.Captura_Geo.Punto_lindero": {QueryNames.VARIABLE_NAME: "FDC_BOUNDARY_POINT_T",QueryNames.FIELDS_DICT: {}},
         # Not there "Captura_Geo.Captura_Geo.ServidumbreTransito": {QueryNames.VARIABLE_NAME: "FDC_RIGHT_OF_WAY_T", QueryNames.FIELDS_DICT: {}},
-        # Not there "Captura_Geo.Captura_Geo.Restriccion": {QueryNames.VARIABLE_NAME: "FDC_RESTRICTION_T", QueryNames.FIELDS_DICT: {}},
+        "Captura_Geo.Captura_Geo.Restriccion": {QueryNames.VARIABLE_NAME: "FDC_RESTRICTION_T", QueryNames.FIELDS_DICT: {
+            "Captura_Geo.Captura_Geo.predio_restriccion.Predio..Captura_Geo.Captura_Geo.Predio": "FDC_RESTRICTION_T_PARCEL_F"
+        }},
         # Not there "Captura_Geo.Captura_Geo.TipologiaConstruccion": {QueryNames.VARIABLE_NAME: "FDC_BUILDING_TYPOLOGY_T", QueryNames.FIELDS_DICT: {}},
         "Captura_Geo.Captura_Geo.Usuarios": {QueryNames.VARIABLE_NAME: "FDC_USER_T", QueryNames.FIELDS_DICT: {
             "Captura_Geo.Captura_Geo.Usuarios.Nombre": "FDC_USER_T_NAME_F",

@@ -511,3 +511,128 @@ class PGLADMQuery(QGISLADMQuery):
                             fdc_plot_t=db.names.FDC_PLOT_T,
                             fdc_plot_t_parcel_f=db.names.FDC_PLOT_T_PARCEL_F)
         return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_right_with_broken_relation_with_plot(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_right_t}
+                           WHERE {fdc_right_t_parcel_f} NOT IN (
+                                SELECT {t_id} FROM {schema}.{fdc_parcel_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_parcel_t=db.names.FDC_PARCEL_T,
+                                    fdc_right_t=db.names.FDC_RIGHT_T,
+                                    fdc_right_t_parcel_f=db.names.FDC_RIGHT_T_PARCEL_F)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_party_with_broken_relation_with_right(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_party_t}
+                           WHERE {t_id} NOT IN (
+                                SELECT DISTINCT {fdc_right_t_party_f} FROM {schema}.{fdc_right_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_party_t=db.names.FDC_PARTY_T,
+                                    fdc_right_t=db.names.FDC_RIGHT_T,
+                                    fdc_right_t_party_f=db.names.FDC_RIGHT_T_PARTY_F)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_administrative_source_right_with_broken_relation_with_right(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_administrative_source_right_t}
+                           WHERE {fdc_administrative_source_right_t_right_f} NOT IN (
+                                SELECT {t_id} FROM {schema}.{fdc_right_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_administrative_source_right_t=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T,
+                                    fdc_administrative_source_right_t_right_f=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T_RIGHT_F,
+                                    fdc_right_t=db.names.FDC_RIGHT_T)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_administrative_source_with_broken_relation_with_right(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_administrative_source_t}
+                           WHERE {t_id} NOT IN (
+                                SELECT DISTINCT {fdc_administrative_source_right_t_administrative_source_f} FROM {schema}.{fdc_administrative_source_right_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_administrative_source_t=db.names.FDC_ADMINISTRATIVE_SOURCE_T,
+                                    fdc_administrative_source_right_t=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T,
+                                    fdc_administrative_source_right_t_administrative_source_f=db.names.FDC_ADMINISTRATIVE_SOURCE_RIGHT_T_ADMINISTRATIVE_SOURCE_F)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_extaddress_with_broken_relation_with_parcel(db):
+        query = """SELECT {t_id}, {t_id} as {t_ili_tid}
+                           FROM {schema}.{ext_address_s}
+                           WHERE predio_direccion NOT IN (
+                                SELECT {t_id} FROM {schema}.{fdc_parcel_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    ext_address_s=db.names.EXT_ADDRESS_S,
+                                    fdc_parcel_t=db.names.FDC_PARCEL_T)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_fdc_housing_market_offers_with_broken_relation_with_parcel(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_housing_market_offers_t}
+                           WHERE {fdc_housing_market_offers_t_parcel_f} NOT IN (
+                                SELECT {t_id} FROM {schema}.{fdc_parcel_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_housing_market_offers_t=db.names.FDC_HOUSING_MARKET_OFFERS_T,
+                                    fdc_housing_market_offers_t_parcel_f=db.names.FDC_HOUSING_MARKET_OFFERS_T_PARCEL_F,
+                                    fdc_parcel_t=db.names.FDC_PARCEL_T)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_fdc_restriction_with_broken_relation_with_parcel(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_restriction_t}
+                           WHERE {fdc_restriction_t_parcel_f} NOT IN (
+                                SELECT {t_id} FROM {schema}.{fdc_parcel_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_restriction_t=db.names.FDC_RESTRICTION_T,
+                                    fdc_restriction_t_parcel_f=db.names.FDC_RESTRICTION_T_PARCEL_F,
+                                    fdc_parcel_t=db.names.FDC_PARCEL_T)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_fdc_building_with_broken_relation_with_parcel(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_building_t}
+                           WHERE {fdc_building_t_parcel_f} NOT IN (
+                                SELECT {t_id} FROM {schema}.{fdc_parcel_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_building_t=db.names.FDC_BUILDING_T,
+                                    fdc_building_t_parcel_f=db.names.FDC_BUILDING_T_PARCEL_F,
+                                    fdc_parcel_t=db.names.FDC_PARCEL_T)
+        return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_fdc_building_unit_with_broken_relation_with_building(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_building_unit_t}
+                           WHERE {fdc_building_unit_t_building_f} NOT IN (
+                                SELECT {t_id} FROM {schema}.{fdc_building_t})
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_building_t=db.names.FDC_BUILDING_T,
+                                    fdc_building_unit_t_building_f=db.names.FDC_BUILDING_UNIT_T_BUILDING_F,
+                                    fdc_building_unit_t=db.names.FDC_BUILDING_UNIT_T)
+        return db.execute_sql_query(query)

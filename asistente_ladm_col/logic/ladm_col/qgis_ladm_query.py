@@ -473,3 +473,39 @@ class QGISLADMQuery:
     @staticmethod
     def get_parcel_with_more_than_one_associated_plot(db):
         raise NotImplementedError
+
+    @staticmethod
+    def get_right_with_broken_relation_with_plot(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_party_with_broken_relation_with_right(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_administrative_source_right_with_broken_relation_with_right(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_administrative_source_with_broken_relation_with_right(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_extaddress_with_broken_relation_with_parcel(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_fdc_housing_market_offers_with_broken_relation_with_parcel(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_fdc_restriction_with_broken_relation_with_parcel(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_fdc_building_with_broken_relation_with_parcel(db):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_fdc_building_unit_with_broken_relation_with_building(db):
+        raise NotImplementedError

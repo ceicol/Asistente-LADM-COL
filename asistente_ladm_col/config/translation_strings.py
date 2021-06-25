@@ -112,7 +112,16 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E422101,
                                                             QUALITY_RULE_ERROR_CODE_E422201,
                                                             QUALITY_RULE_ERROR_CODE_E422301,
-                                                            QUALITY_RULE_ERROR_CODE_E422401)
+                                                            QUALITY_RULE_ERROR_CODE_E422401,
+                                                            QUALITY_RULE_ERROR_CODE_E422501,
+                                                            QUALITY_RULE_ERROR_CODE_E422601,
+                                                            QUALITY_RULE_ERROR_CODE_E422701,
+                                                            QUALITY_RULE_ERROR_CODE_E422801,
+                                                            QUALITY_RULE_ERROR_CODE_E422901,
+                                                            QUALITY_RULE_ERROR_CODE_E423001,
+                                                            QUALITY_RULE_ERROR_CODE_E423101,
+                                                            QUALITY_RULE_ERROR_CODE_E423201,
+                                                            QUALITY_RULE_ERROR_CODE_E423301)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -249,7 +258,16 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel without associated right"),
             EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE: QCoreApplication.translate("TranslatableConfigStrings", "FDC right without associated administrative source"),
             EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel without associated plot"),
-            EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel  with more than one associated plot"),
+            EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel with more than one associated plot"),
+            EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL: QCoreApplication.translate("TranslatableConfigStrings", "FDC right with broken relation fdc parcel"),
+            EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT: QCoreApplication.translate("TranslatableConfigStrings", "FDC party with broken relation fdc right"),
+            EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT: QCoreApplication.translate("TranslatableConfigStrings", "FDC administrative source right with broken relation fdc right"),
+            EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT: QCoreApplication.translate("TranslatableConfigStrings", "FDC administrative source with broken relation fdc right"),
+            EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL: QCoreApplication.translate("TranslatableConfigStrings", "ExtAddress with broken relation fdc parcel"),
+            EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL: QCoreApplication.translate("TranslatableConfigStrings", "FDC housing market offers with broken relation fdc parcel"),
+            EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL: QCoreApplication.translate("TranslatableConfigStrings", "FDC restriction with broken relation fdc parcel"),
+            EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL: QCoreApplication.translate("TranslatableConfigStrings", "FDC building with broken relation fdc parcel"),
+            EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING: QCoreApplication.translate("TranslatableConfigStrings", "FDC building unit with broken relation fdc building"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -371,6 +389,15 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E422201: QCoreApplication.translate("TranslatableConfigStrings", "El derecho no tiene asociado una fuente administrativa"),
             QUALITY_RULE_ERROR_CODE_E422301: QCoreApplication.translate("TranslatableConfigStrings", "El predio no tiene asociado un terreno"),
             QUALITY_RULE_ERROR_CODE_E422401: QCoreApplication.translate("TranslatableConfigStrings", "El predio tiene mas de un terreno asociado"),
+            QUALITY_RULE_ERROR_CODE_E422501: QCoreApplication.translate("TranslatableConfigStrings", "El derecho esta asociado a un predio que no existe"),
+            QUALITY_RULE_ERROR_CODE_E422601: QCoreApplication.translate("TranslatableConfigStrings", "El interesado esta asociado a un derecho que no existe"),
+            QUALITY_RULE_ERROR_CODE_E422701: QCoreApplication.translate("TranslatableConfigStrings", "El fuente_administrativa_derecho esta asociado a un derecho que no existe"),
+            QUALITY_RULE_ERROR_CODE_E422801: QCoreApplication.translate("TranslatableConfigStrings", "El fuente administrativa esta asociado a un derecho que no existe"),
+            QUALITY_RULE_ERROR_CODE_E422901: QCoreApplication.translate("TranslatableConfigStrings", "La dirección esta asociada a un predio que no existe"),
+            QUALITY_RULE_ERROR_CODE_E423001: QCoreApplication.translate("TranslatableConfigStrings", "La oferta de mercado inmobiliario esta asociado a un predio que no existe"),
+            QUALITY_RULE_ERROR_CODE_E423101: QCoreApplication.translate("TranslatableConfigStrings", "La restricción esta asociado a un predio que no existe"),
+            QUALITY_RULE_ERROR_CODE_E423201: QCoreApplication.translate("TranslatableConfigStrings", "La construcción esta asociada a un predio que no existe"),
+            QUALITY_RULE_ERROR_CODE_E423301: QCoreApplication.translate("TranslatableConfigStrings", "La unidad de construcción esta asociada a una construcción que no existe"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")

@@ -200,6 +200,24 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_parcel_without_associated_plot(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT:
             msg, level = self.logic_quality_rules.check_fdc_parcel_with_more_than_one_associated_plot(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL:
+            msg, level = self.logic_quality_rules.check_fdc_right_with_broken_relation_with_plot(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT:
+            msg, level = self.logic_quality_rules.check_fdc_party_with_broken_relation_with_right(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT:
+            msg, level = self.logic_quality_rules.check_fdc_administrative_source_right_with_broken_relation_with_right(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT:
+            msg, level = self.logic_quality_rules.check_fdc_administrative_source_with_broken_relation_with_right(db)
+        elif id_quality_rule == EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL:
+            msg, level = self.logic_quality_rules.check_extaddress_with_broken_relation_with_parcel(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL:
+            msg, level = self.logic_quality_rules.check_fdc_housing_market_offers_with_broken_relation_with_parcel(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL:
+            msg, level = self.logic_quality_rules.check_fdc_restriction_with_broken_relation_with_parcel(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL:
+            msg, level = self.logic_quality_rules.check_fdc_building_with_broken_relation_with_parcel(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING:
+            msg, level = self.logic_quality_rules.check_fdc_building_unit_with_broken_relation_with_building(db)
 
         return msg, level
 

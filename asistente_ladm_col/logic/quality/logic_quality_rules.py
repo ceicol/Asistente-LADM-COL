@@ -83,7 +83,16 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E422101,
                                                             QUALITY_RULE_ERROR_CODE_E422201,
                                                             QUALITY_RULE_ERROR_CODE_E422301,
-                                                            QUALITY_RULE_ERROR_CODE_E422401)
+                                                            QUALITY_RULE_ERROR_CODE_E422401,
+                                                            QUALITY_RULE_ERROR_CODE_E422501,
+                                                            QUALITY_RULE_ERROR_CODE_E422601,
+                                                            QUALITY_RULE_ERROR_CODE_E422701,
+                                                            QUALITY_RULE_ERROR_CODE_E422801,
+                                                            QUALITY_RULE_ERROR_CODE_E422901,
+                                                            QUALITY_RULE_ERROR_CODE_E423001,
+                                                            QUALITY_RULE_ERROR_CODE_E423101,
+                                                            QUALITY_RULE_ERROR_CODE_E423201,
+                                                            QUALITY_RULE_ERROR_CODE_E423301)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -581,6 +590,60 @@ class LogicQualityRules:
         res, records = self.get_ladm_queries(db.engine).get_parcel_with_more_than_one_associated_plot(db)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422401)
+
+    def check_fdc_right_with_broken_relation_with_plot(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RIGHT_BROKEN_RELATION_WITH_FDC_PARCEL)
+        res, records = self.get_ladm_queries(db.engine).get_right_with_broken_relation_with_plot(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422501)
+
+    def check_fdc_party_with_broken_relation_with_right(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARTY_BROKEN_RELATION_WITH_FDC_RIGHT)
+        res, records = self.get_ladm_queries(db.engine).get_party_with_broken_relation_with_right(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422601)
+
+    def check_fdc_administrative_source_right_with_broken_relation_with_right(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_RIGHT_BROKEN_RELATION_WITH_FDC_RIGHT)
+        res, records = self.get_ladm_queries(db.engine).get_administrative_source_right_with_broken_relation_with_right(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422701)
+
+    def check_fdc_administrative_source_with_broken_relation_with_right(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_ADMINISTRATIVE_SOURCE_BROKEN_RELATION_WITH_FDC_RIGHT)
+        res, records = self.get_ladm_queries(db.engine).get_administrative_source_with_broken_relation_with_right(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422801)
+
+    def check_extaddress_with_broken_relation_with_parcel(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.EXT_ADDRESS_BROKEN_RELATION_WITH_FDC_PARCEL)
+        res, records = self.get_ladm_queries(db.engine).get_extaddress_with_broken_relation_with_parcel(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422901)
+
+    def check_fdc_housing_market_offers_with_broken_relation_with_parcel(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL)
+        res, records = self.get_ladm_queries(db.engine).get_fdc_housing_market_offers_with_broken_relation_with_parcel(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E423001)
+
+    def check_fdc_restriction_with_broken_relation_with_parcel(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL)
+        res, records = self.get_ladm_queries(db.engine).get_fdc_restriction_with_broken_relation_with_parcel(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E423101)
+
+    def check_fdc_building_with_broken_relation_with_parcel(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL)
+        res, records = self.get_ladm_queries(db.engine).get_fdc_building_with_broken_relation_with_parcel(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E423201)
+
+    def check_fdc_building_unit_with_broken_relation_with_building(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING)
+        res, records = self.get_ladm_queries(db.engine).get_fdc_building_unit_with_broken_relation_with_building(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E423301)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):
