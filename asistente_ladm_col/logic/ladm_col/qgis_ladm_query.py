@@ -469,3 +469,7 @@ class QGISLADMQuery:
     @staticmethod
     def get_parcel_without_associated_plot(db):
         raise NotImplementedError
+
+    @staticmethod
+    def get_parcel_with_more_than_one_associated_plot(db):
+        raise NotImplementedError

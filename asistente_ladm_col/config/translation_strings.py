@@ -111,7 +111,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E422001,
                                                             QUALITY_RULE_ERROR_CODE_E422101,
                                                             QUALITY_RULE_ERROR_CODE_E422201,
-                                                            QUALITY_RULE_ERROR_CODE_E422301)
+                                                            QUALITY_RULE_ERROR_CODE_E422301,
+                                                            QUALITY_RULE_ERROR_CODE_E422401)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -248,6 +249,7 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel without associated right"),
             EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE: QCoreApplication.translate("TranslatableConfigStrings", "FDC right without associated administrative source"),
             EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel without associated plot"),
+            EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT: QCoreApplication.translate("TranslatableConfigStrings", "FDC parcel  with more than one associated plot"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -368,6 +370,7 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E422101: QCoreApplication.translate("TranslatableConfigStrings", "El predio no tiene asociado un derecho"),
             QUALITY_RULE_ERROR_CODE_E422201: QCoreApplication.translate("TranslatableConfigStrings", "El derecho no tiene asociado una fuente administrativa"),
             QUALITY_RULE_ERROR_CODE_E422301: QCoreApplication.translate("TranslatableConfigStrings", "El predio no tiene asociado un terreno"),
+            QUALITY_RULE_ERROR_CODE_E422401: QCoreApplication.translate("TranslatableConfigStrings", "El predio tiene mas de un terreno asociado"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")

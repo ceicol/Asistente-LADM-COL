@@ -141,6 +141,7 @@ QUALITY_RULE_ERROR_CODE_E422001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E422101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT.value) + '01'
 QUALITY_RULE_ERROR_CODE_E422201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE.value) + '01'
 QUALITY_RULE_ERROR_CODE_E422301 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT.value) + '01'
+QUALITY_RULE_ERROR_CODE_E422401 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -964,6 +965,17 @@ class QualityRuleConfig:
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E422301
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_predio_con_mas_de_un_terreno_asociado"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_predio"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E422401
                         ]
                     }
                 }

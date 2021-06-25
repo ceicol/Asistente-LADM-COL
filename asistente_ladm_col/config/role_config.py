@@ -380,7 +380,8 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE,
                 EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT,
                 EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE,
-                EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT
+                EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT,
+                EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT
             ],
             ROLE_GUI_CONFIG: field_admin_role_gui
         },
@@ -421,7 +422,8 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_TYPE,
                 EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_RIGHT,
                 EnumQualityRule.Logic.FDC_RIGHT_WITHOUT_ASSOCIATED_ADMINISTRATIVE_SOURCE,
-                EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT
+                EnumQualityRule.Logic.FDC_PARCEL_WITHOUT_ASSOCIATED_PLOT,
+                EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT
             ],
             ROLE_GUI_CONFIG: field_coordinator_role_gui
         },

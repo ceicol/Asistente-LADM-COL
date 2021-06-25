@@ -357,3 +357,20 @@ class GPKGLADMQuery(QGISLADMQuery):
                             fdc_plot_t=db.names.FDC_PLOT_T,
                             fdc_plot_t_parcel_f=db.names.FDC_PLOT_T_PARCEL_F)
         return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_parcel_with_more_than_one_associated_plot(db):
+        query = """SELECT {t_id}, {t_ili_tid}, total_terrenos
+                   from (
+                        SELECT {fdc_plot_t_parcel_f}, count(*) AS total_terrenos
+                        FROM {fdc_plot_t}
+                        GROUP BY {fdc_plot_t_parcel_f}
+                        HAVING count(*) > 1) AS predio_terrenos
+                   JOIN {fdc_parcel_t}
+                   ON predio_terrenos.{fdc_plot_t_parcel_f} = {fdc_parcel_t}.{t_id}
+                 """.format(t_id=db.names.T_ID_F,
+                            t_ili_tid=db.names.T_ILI_TID_F,
+                            fdc_parcel_t=db.names.FDC_PARCEL_T,
+                            fdc_plot_t=db.names.FDC_PLOT_T,
+                            fdc_plot_t_parcel_f=db.names.FDC_PLOT_T_PARCEL_F)
+        return db.execute_sql_query(query)

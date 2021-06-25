@@ -82,7 +82,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E422001,
                                                             QUALITY_RULE_ERROR_CODE_E422101,
                                                             QUALITY_RULE_ERROR_CODE_E422201,
-                                                            QUALITY_RULE_ERROR_CODE_E422301)
+                                                            QUALITY_RULE_ERROR_CODE_E422301,
+                                                            QUALITY_RULE_ERROR_CODE_E422401)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -574,6 +575,12 @@ class LogicQualityRules:
         res, records = self.get_ladm_queries(db.engine).get_parcel_without_associated_plot(db)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422301)
+
+    def check_fdc_parcel_with_more_than_one_associated_plot(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARCEL_WITH_MORE_THAN_ONE_ASSOCIATED_PLOT)
+        res, records = self.get_ladm_queries(db.engine).get_parcel_with_more_than_one_associated_plot(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E422401)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):
