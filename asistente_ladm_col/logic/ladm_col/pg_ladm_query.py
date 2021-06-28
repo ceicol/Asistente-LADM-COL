@@ -636,3 +636,15 @@ class PGLADMQuery(QGISLADMQuery):
                                     fdc_building_unit_t_building_f=db.names.FDC_BUILDING_UNIT_T_BUILDING_F,
                                     fdc_building_unit_t=db.names.FDC_BUILDING_UNIT_T)
         return db.execute_sql_query(query)
+
+    @staticmethod
+    def get_fdc_party_with_invalid_document_number(db):
+        query = """SELECT {t_id}, {t_ili_tid}
+                           FROM {schema}.{fdc_party_t}
+                           WHERE {fdc_party_t_f_document_id_f} = '99999'
+                         """.format(t_id=db.names.T_ID_F,
+                                    t_ili_tid=db.names.T_ILI_TID_F,
+                                    schema=db.schema,
+                                    fdc_party_t=db.names.FDC_PARTY_T,
+                                    fdc_party_t_f_document_id_f=db.names.FDC_PARTY_T_F_DOCUMENT_ID_F)
+        return db.execute_sql_query(query)

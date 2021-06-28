@@ -151,6 +151,7 @@ QUALITY_RULE_ERROR_CODE_E423001 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.
 QUALITY_RULE_ERROR_CODE_E423101 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL.value) + '01'
 QUALITY_RULE_ERROR_CODE_E423201 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL.value) + '01'
 QUALITY_RULE_ERROR_CODE_E423301 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING.value) + '01'
+QUALITY_RULE_ERROR_CODE_E423401 = PREFIX_ERROR_CODE + str(EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER.value) + '01'
 
 class QualityRuleConfig:
     @staticmethod
@@ -1084,6 +1085,17 @@ class QualityRuleConfig:
                         ],
                         QUALITY_RULE_DOMAIN_ERROR_CODES: [
                             QUALITY_RULE_ERROR_CODE_E423301
+                        ]
+                    },
+                    EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER: {
+                        QUALITY_RULE_ID: EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER,
+                        QUALITY_RULE_NAME: translated_strings[EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER],
+                        QUALITY_RULE_TABLE_NAME: QCoreApplication.translate("QualityRulesConfig", "fdc_interesado_con_numero_documento_invalido"),
+                        QUALITY_RULE_TABLE_FIELDS: [
+                            QgsField(QCoreApplication.translate("QualityRulesConfig", "id_interesado"), QVariant.String)
+                        ],
+                        QUALITY_RULE_DOMAIN_ERROR_CODES: [
+                            QUALITY_RULE_ERROR_CODE_E423401
                         ]
                     }
                 }

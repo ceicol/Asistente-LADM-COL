@@ -92,7 +92,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E423001,
                                                             QUALITY_RULE_ERROR_CODE_E423101,
                                                             QUALITY_RULE_ERROR_CODE_E423201,
-                                                            QUALITY_RULE_ERROR_CODE_E423301)
+                                                            QUALITY_RULE_ERROR_CODE_E423301,
+                                                            QUALITY_RULE_ERROR_CODE_E423401)
 from asistente_ladm_col.config.enums import EnumQualityRule
 from asistente_ladm_col.config.ladm_names import LADMNames
 from asistente_ladm_col.lib.logger import Logger
@@ -644,6 +645,12 @@ class LogicQualityRules:
         res, records = self.get_ladm_queries(db.engine).get_fdc_building_unit_with_broken_relation_with_building(db)
         if res:
             return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E423301)
+
+    def check_fdc_party_with_invalid_document_number(self, db):
+        rule = self.quality_rules_manager.get_quality_rule(EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER)
+        res, records = self.get_ladm_queries(db.engine).get_fdc_party_with_invalid_document_number(db)
+        if res:
+            return self.basic_logic_validations(db, records, rule, QUALITY_RULE_ERROR_CODE_E423401)
 
     # UTILS METHODS
     def basic_logic_validations(self, db, records, rule, error_code):

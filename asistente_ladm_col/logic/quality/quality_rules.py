@@ -218,6 +218,8 @@ class QualityRules:
             msg, level = self.logic_quality_rules.check_fdc_building_with_broken_relation_with_parcel(db)
         elif id_quality_rule == EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING:
             msg, level = self.logic_quality_rules.check_fdc_building_unit_with_broken_relation_with_building(db)
+        elif id_quality_rule == EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER:
+            msg, level = self.logic_quality_rules.check_fdc_party_with_invalid_document_number(db)
 
         return msg, level
 

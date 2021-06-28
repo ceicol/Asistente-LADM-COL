@@ -390,7 +390,8 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL,
                 EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL,
                 EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL,
-                EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING
+                EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING,
+                EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER
             ],
             ROLE_GUI_CONFIG: field_admin_role_gui
         },
@@ -441,7 +442,8 @@ def get_role_config():
                 EnumQualityRule.Logic.FDC_HOUSING_MARKET_OFFERS_BROKEN_RELATION_WITH_FDC_PARCEL,
                 EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL,
                 EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL,
-                EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING
+                EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING,
+                EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER
             ],
             ROLE_GUI_CONFIG: field_coordinator_role_gui
         },

@@ -509,3 +509,7 @@ class QGISLADMQuery:
     @staticmethod
     def get_fdc_building_unit_with_broken_relation_with_building(db):
         raise NotImplementedError
+
+    @staticmethod
+    def get_fdc_party_with_invalid_document_number(db):
+        raise NotImplementedError

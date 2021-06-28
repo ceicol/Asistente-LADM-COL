@@ -495,7 +495,7 @@ DB_MAPPING_CONFIG = {
             # "Captura_Geo.Captura_Geo.Interesado.Cuota_Participacion": "FDC_PARTY_T_F",
             "Captura_Geo.Captura_Geo.Interesado.Departamento": "FDC_PARTY_T_RESIDENCE_DEPARTMENT_F",
             # "Captura_Geo.Captura_Geo.Interesado.Direccion_Residencia": "FDC_PARTY_T_F",
-            # "Captura_Geo.Captura_Geo.Interesado.Documento_Identidad": "FDC_PARTY_T_F",
+            "Captura_Geo.Captura_Geo.Interesado.Documento_Identidad": "FDC_PARTY_T_F_DOCUMENT_ID_F",
             # "Captura_Geo.Captura_Geo.Interesado.Grupo_Etnico": "FDC_PARTY_T_F",
             "Captura_Geo.Captura_Geo.Interesado.Municipio": "FDC_PARTY_T_RESIDENCE_MUNICIPALITY_F",
             # "Captura_Geo.Captura_Geo.Interesado.Primer_Apellido": "FDC_PARTY_T_F",

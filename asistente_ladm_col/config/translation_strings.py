@@ -121,7 +121,8 @@ from asistente_ladm_col.config.quality_rules_config import (QUALITY_RULE_ERROR_C
                                                             QUALITY_RULE_ERROR_CODE_E423001,
                                                             QUALITY_RULE_ERROR_CODE_E423101,
                                                             QUALITY_RULE_ERROR_CODE_E423201,
-                                                            QUALITY_RULE_ERROR_CODE_E423301)
+                                                            QUALITY_RULE_ERROR_CODE_E423301,
+                                                            QUALITY_RULE_ERROR_CODE_E423401)
 
 ERROR_LAYER_GROUP = "ERROR_LAYER_GROUP"
 RIGHT_OF_WAY_LINE_LAYER = "RIGHT_OF_WAY_LINE_LAYER"
@@ -268,6 +269,7 @@ class TranslatableConfigStrings(QObject):
             EnumQualityRule.Logic.FDC_RESTRICTION_BROKEN_RELATION_WITH_FDC_PARCEL: QCoreApplication.translate("TranslatableConfigStrings", "FDC restriction with broken relation fdc parcel"),
             EnumQualityRule.Logic.FDC_BUILDING_BROKEN_RELATION_WITH_FDC_PARCEL: QCoreApplication.translate("TranslatableConfigStrings", "FDC building with broken relation fdc parcel"),
             EnumQualityRule.Logic.FDC_BUILDING_UNIT_BROKEN_RELATION_WITH_FDC_BUILDING: QCoreApplication.translate("TranslatableConfigStrings", "FDC building unit with broken relation fdc building"),
+            EnumQualityRule.Logic.FDC_PARTY_WITH_INVALID_DOCUMENT_NUMBER: QCoreApplication.translate("TranslatableConfigStrings", "FDC party with invalid document number"),
 
             # Domain errors message
             # ERROR CODES FOR POINT QUALITY RULES
@@ -398,6 +400,7 @@ class TranslatableConfigStrings(QObject):
             QUALITY_RULE_ERROR_CODE_E423101: QCoreApplication.translate("TranslatableConfigStrings", "La restricción esta asociado a un predio que no existe"),
             QUALITY_RULE_ERROR_CODE_E423201: QCoreApplication.translate("TranslatableConfigStrings", "La construcción esta asociada a un predio que no existe"),
             QUALITY_RULE_ERROR_CODE_E423301: QCoreApplication.translate("TranslatableConfigStrings", "La unidad de construcción esta asociada a una construcción que no existe"),
+            QUALITY_RULE_ERROR_CODE_E423401: QCoreApplication.translate("TranslatableConfigStrings", "El número de documento del interesado no debe ser '99999'"),
 
             ERROR_LAYER_GROUP: QCoreApplication.translate("TranslatableConfigStrings", "Validation errors"),
             RIGHT_OF_WAY_LINE_LAYER: QCoreApplication.translate("TranslatableConfigStrings", "Right of way line")
