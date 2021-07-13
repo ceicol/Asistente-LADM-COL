@@ -360,7 +360,7 @@ def get_role_config():
                 EnumQualityRule.Polygon.OVERLAPS_IN_FDC_PLOTS,
                 EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL,
-                EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL,
+                # EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL, # QR is disabled because the attribute is optional
                 EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL,
@@ -412,7 +412,7 @@ def get_role_config():
                 EnumQualityRule.Polygon.OVERLAPS_IN_FDC_PLOTS,
                 EnumQualityRule.Logic.FDC_PARCEL_PARCEL_TYPE_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_CONDITION_TYPE_IS_NULL,
-                EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL,
+                # EnumQualityRule.Logic.FDC_PARCEL_LAND_CATEGORY_IS_NULL, # QR is disabled because the attribute is optional
                 EnumQualityRule.Logic.FDC_PARCEL_LAND_CLASS_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_ECONOMIC_DESTINATION_IS_NULL,
                 EnumQualityRule.Logic.FDC_PARCEL_DATE_OF_PROPERTY_VISIT_IS_NULL,
