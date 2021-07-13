@@ -542,7 +542,7 @@ class PGLADMQuery(QGISLADMQuery):
 
     @staticmethod
     def get_administrative_source_right_with_broken_relation_with_right(db):
-        query = """SELECT {t_id}, {t_ili_tid}
+        query = """SELECT {t_id}, {t_id} as {t_ili_tid}
                            FROM {schema}.{fdc_administrative_source_right_t}
                            WHERE {fdc_administrative_source_right_t_right_f} NOT IN (
                                 SELECT {t_id} FROM {schema}.{fdc_right_t})
